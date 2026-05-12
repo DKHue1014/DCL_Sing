@@ -1,0 +1,2342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disney Cruise Adventure — 실탑승 후기 종합편 2026</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Disney Cruise Adventure — 실탑승 후기 종합편 2026">
+<meta property="og:description" content="싱가포르 출항 디즈니 크루즈 어드벤처 실탑승 후기 종합편. 3-5월 실제 탑승자들의 생생한 팁과 노하우를 15개 섹션으로 정리.">
+<meta property="og:locale" content="ko_KR">
+<meta name="description" content="실탑승자가 직접 검증한 디즈니 크루즈 어드벤처 팁 모음. 승선 타임라인부터 객실·음식·공연·캐릭터·하선까지.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a1628'/><text y='72' x='50' text-anchor='middle' font-size='60'>💬</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Noto+Sans+KR:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0a1628;
+  --navy-mid: #122040;
+  --navy-light: #1e3461;
+  --gold: #c9973a;
+  --gold-light: #f0c96e;
+  --gold-pale: #fdf3de;
+  --cream: #faf8f4;
+  --white: #ffffff;
+  --text: #1a1a2e;
+  --text-muted: #5a6a8a;
+  --blue-accent: #3d7cc9;
+  --red: #c0392b;
+  --red-bg: #fff5f5;
+  --green: #1a6640;
+  --green-bg: #f0faf4;
+  --border: #e2e8f0;
+  --shadow: 0 4px 24px rgba(10,22,40,0.10);
+  --shadow-lg: 0 12px 48px rgba(10,22,40,0.18);
+  --radius: 12px;
+  --sidebar-w: 260px;
+  --quote-bg: #fbf8f0;
+  --quote-border: #d4b870;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── HERO ───────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy-light) 100%);
+  color: var(--white);
+  padding: 56px 24px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(circle at 25% 30%, rgba(201,151,58,0.18) 0%, transparent 50%),
+    radial-gradient(circle at 75% 70%, rgba(61,124,201,0.12) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-icon { font-size: 44px; display: block; margin-bottom: 14px; opacity: 0.95; }
+.hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+  line-height: 1.15;
+}
+.hero h1 em { color: var(--gold-light); font-style: italic; }
+.hero-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 26px;
+  letter-spacing: 0.01em;
+}
+.hero-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; margin-bottom: 28px; }
+.badge {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(201,151,58,0.45);
+  padding: 5px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.9);
+}
+.search-wrap {
+  max-width: 540px; margin: 0 auto;
+  position: relative;
+  background: rgba(255,255,255,0.96);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+.search-input {
+  width: 100%;
+  padding: 13px 44px 13px 44px;
+  border: none;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-family: inherit;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+}
+.search-icon {
+  position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+  color: var(--text-muted); font-size: 17px;
+}
+.search-count {
+  position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+  font-size: 11.5px; color: var(--text-muted); pointer-events: none;
+}
+
+/* ── LAYOUT ─────────────────────────────── */
+.app-layout {
+  display: flex;
+  max-width: 1280px;
+  margin: 24px auto 0;
+  padding: 0 24px;
+  gap: 24px;
+}
+.sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  position: sticky;
+  top: 16px;
+  align-self: flex-start;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+}
+.nav-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 6px 0;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.nav-header {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 14px 18px 10px;
+  border-bottom: 1px solid var(--border);
+}
+.nav-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 18px;
+  font-size: 12.5px;
+  color: var(--text);
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.nav-item:hover { background: var(--gold-pale); }
+.nav-item.active { background: var(--gold-pale); border-left-color: var(--gold); color: var(--navy); font-weight: 600; }
+.nav-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px;
+  background: var(--navy-light);
+  color: var(--gold-light);
+  border-radius: 50%;
+  font-size: 10px;
+  font-family: 'DM Mono', monospace;
+  font-weight: 600;
+}
+.nav-item.active .nav-num { background: var(--gold); color: var(--navy); }
+.nav-item-emoji { width: 18px; text-align: center; font-size: 14px; }
+
+.main { flex: 1; min-width: 0; }
+
+/* ── SECTION CARD ───────────────────────── */
+.section-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  margin-bottom: 18px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.section-card:hover { box-shadow: var(--shadow-lg); }
+.sec-header {
+  display: flex; align-items: center; gap: 14px;
+  padding: 18px 24px;
+  cursor: pointer;
+  background: linear-gradient(to right, var(--navy) 0%, var(--navy-mid) 100%);
+  color: var(--white);
+  user-select: none;
+}
+.sec-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--gold-light);
+  opacity: 0.7;
+  line-height: 1;
+  min-width: 36px;
+}
+.sec-title { font-size: 16px; font-weight: 700; letter-spacing: -0.01em; flex: 1; }
+.sec-toggle {
+  font-size: 18px;
+  transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
+  opacity: 0.7;
+}
+.sec-header.collapsed .sec-toggle { transform: rotate(-90deg); }
+.sec-body { padding: 24px; }
+.sec-body.collapsed { display: none; }
+
+/* ── CONTENT BLOCKS ─────────────────────── */
+.h2 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 20px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--gold-pale);
+  display: flex; align-items: center; gap: 6px;
+}
+.h2:first-child { margin-top: 0; }
+
+.bullet-list { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.bullet-list li {
+  padding-left: 20px;
+  position: relative;
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+.bullet-list li::before {
+  content: '▸';
+  position: absolute; left: 0;
+  color: var(--blue-accent);
+  font-size: 12px;
+  top: 3px;
+}
+
+/* ── TABLES ─────────────────────────────── */
+.tbl-wrap { overflow-x: auto; margin-bottom: 16px; border-radius: 8px; border: 1px solid var(--border); }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead tr { background: var(--navy); color: var(--white); }
+thead th { padding: 10px 14px; text-align: left; font-weight: 600; font-size: 12.5px; letter-spacing: 0.02em; }
+tbody tr { border-bottom: 1px solid var(--border); transition: background 0.12s; }
+tbody tr:last-child { border-bottom: none; }
+tbody tr:nth-child(even) { background: #f9fbff; }
+tbody tr:hover { background: var(--gold-pale); }
+tbody td { padding: 9px 14px; vertical-align: top; }
+
+/* ── BOXES ──────────────────────────────── */
+.box {
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.box-icon { font-weight: 700; display: block; margin-bottom: 6px; }
+.box ul { list-style: none; display: flex; flex-direction: column; gap: 4px; padding: 0; }
+.box ul li { padding-left: 16px; position: relative; }
+.box ul li::before { content: '•'; position: absolute; left: 2px; }
+
+.box-tip { background: #eff7ff; border: 1px solid #a8d0f0; }
+.box-tip .box-icon { color: #1a5fa8; }
+.box-tip ul li::before { color: #1a5fa8; }
+
+.box-warn { background: var(--red-bg); border: 1px solid #f5c6c6; }
+.box-warn .box-icon { color: var(--red); }
+.box-warn ul li::before { color: var(--red); }
+
+.box-gold { background: var(--gold-pale); border: 1px solid #e8c86e; }
+.box-gold .box-icon { color: #a07020; }
+.box-gold ul li::before { color: #a07020; }
+
+.box-green { background: var(--green-bg); border: 1px solid #a8d4b8; }
+.box-green .box-icon { color: var(--green); }
+.box-green ul li::before { color: var(--green); }
+
+/* ── REVIEW QUOTE (새 컴포넌트) ───────────── */
+.quote {
+  background: var(--quote-bg);
+  border-left: 4px solid var(--quote-border);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px 12px 18px;
+  margin: 10px 0 14px;
+  position: relative;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #3a3826;
+}
+.quote::before {
+  content: '"';
+  position: absolute;
+  top: 2px; left: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  color: var(--quote-border);
+  opacity: 0.5;
+  line-height: 1;
+}
+.quote-text { padding-left: 20px; }
+.quote-author {
+  display: block;
+  margin-top: 8px;
+  padding-left: 20px;
+  font-size: 11.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.quote-author::before { content: '— '; }
+
+/* 검증 마크 */
+.verified {
+  display: inline-block;
+  background: var(--green-bg);
+  color: var(--green);
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* 타임라인 컴포넌트 */
+.timeline {
+  position: relative;
+  margin: 18px 0;
+  padding-left: 28px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold) 0%, var(--gold-pale) 100%);
+}
+.tl-item {
+  position: relative;
+  padding: 8px 0 14px;
+}
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: -24px;
+  top: 12px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,151,58,0.15);
+}
+.tl-time {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--gold-light);
+  font-family: 'DM Mono', monospace;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+.tl-body { font-size: 13px; line-height: 1.65; }
+.tl-body strong { color: var(--navy); }
+
+/* 평가 게이지 */
+.rating-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 60px;
+  gap: 10px;
+  align-items: center;
+  padding: 7px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 13px;
+}
+.rating-row:last-child { border-bottom: none; }
+.rating-bar {
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+.rating-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(to right, var(--gold) 0%, var(--gold-light) 100%);
+}
+.rating-score {
+  font-family: 'DM Mono', monospace;
+  font-weight: 600;
+  color: var(--navy);
+  font-size: 12px;
+  text-align: right;
+}
+
+/* 태그 */
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+  margin: 0 2px;
+}
+.tag-free { background: var(--green-bg); color: var(--green); }
+.tag-paid { background: #fff3e6; color: #a05020; }
+.tag-warn { background: var(--red-bg); color: var(--red); }
+.tag-ok { background: #e8f5e9; color: #2e7d32; }
+.tag-new { background: #ede4fc; color: #5d3eb3; }
+.tag-must { background: var(--navy); color: var(--gold-light); }
+
+/* 강조 박스 */
+.hl { background: rgba(201,151,58,0.30); border-radius: 2px; padding: 0 2px; font-weight: 600; }
+
+/* 상단 인용 인덱스 */
+.contributor-strip {
+  background: var(--cream);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.contributor-strip strong { color: var(--navy); font-weight: 700; }
+
+/* 추천도 / 비추 마크 */
+.verdict {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 9px;
+  border-radius: 4px;
+  font-size: 11.5px;
+  font-weight: 700;
+  margin-right: 6px;
+}
+.verdict-yes { background: var(--green-bg); color: var(--green); }
+.verdict-no { background: var(--red-bg); color: var(--red); }
+.verdict-mid { background: #fff3e6; color: #a05020; }
+
+#back-top {
+  position: fixed; bottom: 28px; right: 28px;
+  width: 44px; height: 44px;
+  background: var(--navy);
+  color: var(--gold-light);
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  opacity: 0; pointer-events: none;
+  transition: all 0.3s;
+  box-shadow: var(--shadow);
+  z-index: 999;
+}
+#back-top.show { opacity: 1; pointer-events: all; }
+#back-top:hover { background: var(--navy-light); transform: translateY(-2px); }
+
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  padding: 24px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+.footer strong { color: var(--gold-light); }
+
+.no-results {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+.no-results .big { font-size: 40px; display: block; margin-bottom: 12px; }
+
+/* 보완 CSS */
+.box-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--navy);
+}
+.tag-blue { background: #e8f0ff; color: #2a5dab; }
+.tag-gold { background: var(--gold-bg); color: var(--gold-dark); }
+.tl-desc { font-size: 13.5px; line-height: 1.6; color: var(--text); }
+.rating-bar { margin: 12px 0; }
+.rating-row {
+  display: grid;
+  grid-template-columns: 1fr 200px 60px;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0;
+  font-size: 13px;
+}
+.rating-label { color: var(--text); }
+.rating-track {
+  height: 14px;
+  background: #f0eee8;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.rating-fill {
+  height: 100%;
+  border-radius: 7px;
+  transition: width 0.5s;
+}
+.rating-val { font-weight: 700; color: var(--navy); text-align: right; }
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .app-layout { flex-direction: column; padding: 12px; gap: 16px; }
+  .sidebar { width: 100%; position: static; max-height: none; }
+  .nav-card { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .nav-header { grid-column: 1 / -1; }
+  .nav-item { border-left: none; border-bottom: 1px solid var(--border); border-top: none; justify-content: center; text-align: center; flex-direction: column; gap: 4px; padding: 10px 6px; font-size: 11px; }
+  .nav-num { width: 20px; height: 20px; font-size: 10px; }
+  .hero { padding: 40px 20px; }
+  .main { width: 100%; min-width: 0; overflow-x: hidden; }
+  .section-card { overflow-x: hidden; }
+  .sec-body { padding: 16px 12px; overflow-x: hidden; }
+  .tbl-wrap { overflow-x: auto; max-width: 100%; }
+  table { font-size: 12px; word-break: break-word; }
+  thead th { padding: 8px 10px; font-size: 11.5px; }
+  tbody td { padding: 7px 10px; font-size: 12px; }
+  .box { padding: 12px; font-size: 12.5px; }
+  .bullet-list li { font-size: 13px; }
+  .h2 { font-size: 13px; }
+  .quote { font-size: 12.5px; padding: 10px 12px 10px 16px; }
+  .quote-text { padding-left: 18px; }
+  .quote-author { padding-left: 18px; }
+  .rating-row { grid-template-columns: 1fr 60px 50px; font-size: 12px; }
+  .timeline { padding-left: 22px; }
+  .tl-item::before { left: -20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <span class="hero-icon">💬</span>
+  <h1>Disney Cruise <em>Adventure</em></h1>
+  <p class="hero-sub">실탑승 후기 종합편 · 2026 3~5월 항차 검증</p>
+  <div class="hero-badges">
+    <span class="badge">🗣 100+ 실탑승자 후기</span>
+    <span class="badge">📅 3 ~ 5월 항차 기반</span>
+    <span class="badge">⏱ 시간·동선·금액 검증</span>
+    <span class="badge">✅ 출처 명시</span>
+  </div>
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input class="search-input" id="searchInput" type="text" placeholder="검색 — 롤코, 오하나, 컨시, 비비디, 픽시…" autocomplete="off">
+    <span class="search-count" id="searchCount"></span>
+  </div>
+</header>
+
+<div class="app-layout">
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar" id="sidebar">
+    <div class="nav-card">
+      <div class="nav-header">📋 후기로 본 모든 것</div>
+      <a class="nav-item active" href="javascript:void(0)" data-secid="sec01"><span class="nav-num">01</span><span class="nav-item-emoji">🕐</span>승선 D-day 타임라인</a>
+      <a class="nav-item" href="javascript:void(0)" data-secid="sec02"><span class="nav-num">02</span><span class="nav-item-emoji">⚡</span>사전예약 전쟁</a>
+      <a class="nav-item" href="javascript:void(0)" data-secid="sec03"><span class="nav-num">03</span><span class="nav-item-emoji">🛏️</span>객실 선택의 진실</a>
+      <a class="nav-item" href="javascript:void(0)" data-secid="sec04"><span class="nav-num">04</span><span class="nav-item-emoji">🍽️</span>음식 가성비 랭킹</a>
+      <a class="nav-item" href="javascript:void(0)" data-secid="sec05"><span class="nav-num">05</span><span class="nav-item-emoji">🎭</span>공연 자리잡기</a>
+      <a class="nav-item" href="javascript:void(0)" data-secid="sec06"><span class="nav-num">06</span><span class="nav-item-emoji">👑</span>캐릭터 실제 출몰</a>
+      <a class="nav-item" href="javascript:void(0)" data-secid="sec07"><span class="nav-num">07</span><span class="nav-item-emoji">🏊</span>수영장 동선</a>
+      <a class="nav-item" href="javascript:void(0)" data-secid="sec08"><span class="nav-num">08</span><span class="nav-item-emoji">📸</span>포토패키지 검증</a>
+      <a class="nav-item" href="javascript:void(0)" data-secid="sec09"><span class="nav-num">09</span><span class="nav-item-emoji">🥂</span>컨시어지 진짜 후기</a>
+      <a class="nav-item" href="javascript:void(0)" data-secid="sec10"><span class="nav-num">10</span><span class="nav-item-emoji">🧳</span>가져갈 vs 말 것</a>
+      <a class="nav-item" href="javascript:void(0)" data-secid="sec11"><span class="nav-num">11</span><span class="nav-item-emoji">📱</span>와이파이·통신</a>
+      <a class="nav-item" href="javascript:void(0)" data-secid="sec12"><span class="nav-num">12</span><span class="nav-item-emoji">💰</span>진짜 얼마 썼나</a>
+      <a class="nav-item" href="javascript:void(0)" data-secid="sec13"><span class="nav-num">13</span><span class="nav-item-emoji">🚨</span>돌발 상황 대처</a>
+      <a class="nav-item" href="javascript:void(0)" data-secid="sec14"><span class="nav-num">14</span><span class="nav-item-emoji">🏁</span>하선 & 직후</a>
+      <a class="nav-item" href="javascript:void(0)" data-secid="sec15"><span class="nav-num">15</span><span class="nav-item-emoji">💎</span>총평 & 한마디</a>
+    </div>
+  </nav>
+
+  <main class="main" id="mainContent">
+  <!-- ====================================================== -->
+  <!-- 01 승선 D-day 타임라인                                  -->
+  <!-- ====================================================== -->
+  <div class="section-card" id="sec01">
+    <div class="sec-header">
+      <span class="sec-num">01</span>
+      <span class="sec-title">🕐 승선 D-day 타임라인 — 첫째 날 시간별 액션</span>
+      <span class="sec-toggle">▾</span>
+    </div>
+    <div class="sec-body">
+      <div class="contributor-strip">
+        <strong>주요 출처</strong> · naldo(3/26), 카할라(3/26), 애나벨(3/26), 듀듀(4/13), 엘로이(4.2), 인어니모(4.16), 리틀새론(3/10), 김남순(3/13), 윤현아빠(4/30)
+      </div>
+
+      <div class="box box-gold">
+        <span class="box-icon">🎯 핵심 요약</span>
+        <ul>
+          <li><strong>11:30~11:45 도착이 골든타임</strong> — 보딩그룹 빠르면 12:14에 배 위, 13:35에 방 입실 (naldo, 듀듀 검증)</li>
+          <li><strong>승선 직후 30분이 첫 식사 자리 경쟁의 핵심</strong> — 픽사 뷔페가 곧 폭주함</li>
+          <li><strong>방 들어가기 전 첫 점심을 먹어 두면 무조건 유리</strong> — 짐 정리·문꾸·출항파티 1차에 여유 생김 (듀듀)</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">⏱ 시간별 실전 동선</h3>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <span class="tl-time">~ 11:30 항구 도착</span>
+          <div class="tl-body">
+            <strong>11:30 이전 도착 권장.</strong> 보딩그룹 9~11번이어도 일찍 도착하면 짐 검사→체크인→대기석 흐름이 빠름. 짐 검사 후 보딩그룹 스티커가 있으면(예: 컨시어지·골드·일부 호텔 패키지) 그 그룹으로 재배정됨.
+            <div class="quote">
+              <div class="quote-text">12시 체크인 12:14에 배 올랐고 1:30부터 룸 사용 가능하다해서 1:35쯤 와보니 벌써 15층 방 근처에 캐리어 와있어서 가지고 들어왔어요!</div>
+              <span class="quote-author">naldo (3/26 항차)</span>
+            </div>
+            <div class="quote">
+              <div class="quote-text">11:40쯤 포트 도착했는데 12:15 그룹까지만 들여보내주고 12:30 그룹은 바깥쪽에 줄서있었습니다.</div>
+              <span class="quote-author">naldo (3/26 항차)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-time">11:45 ~ 12:30 보안검색·체크인</span>
+          <div class="tl-body">
+            짐 검사 시 <strong>금지품목 외엔 빨리 통과</strong>. 다만 일부 항차에서 <span class="hl">초코우유·아동용 음료</span>가 우유 분류로 압수된 사례 있음. 입국용 <strong>Port Arrival Form</strong>은 핸드폰 화면에 띄워두거나 출력해 가면 매번 꺼내기 편함(엘로이).
+            <div class="quote">
+              <div class="quote-text">의외로 배타기전 캐리어 검사할 때 초코우유 뺏겼어요. 우유라서 그른가봐요.</div>
+              <span class="quote-author">날탱양 (3/23~26 항차)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-time">12:00 ~ 13:00 첫 점심 + 사전 예약 전쟁</span>
+          <div class="tl-body">
+            <strong>승선 직후 액션 순서</strong>는 ①와이파이 자동 연결 → ②<span class="hl">앱에서 로얄게더링 예약</span> → ③픽사 뷔페 점심. 보딩그룹 10번이라도 11:30 도착하면 로얄게더링 예약 가능했다는 사례 있음(애나벨). 점심은 빨리 먹어두는 게 핵심 — 1시 이후엔 자리가 없어짐.
+            <div class="quote">
+              <div class="quote-text">11시 45분이면 나름 일찍 들어간 편인데도 픽사마켓에 가서 점심먹자니 진짜 사람이 너무 많았음.</div>
+              <span class="quote-author">엘로이 (4.2 항차)</span>
+            </div>
+            <div class="box box-warn">
+              <span class="box-icon">⚠️ 함정 1 — 식당 vs 게임 선택</span>
+              <ul>
+                <li>샌프란쇼코 게임 vs 픽사 점심 고민되면 <strong>점심 먼저</strong>가 정답 (Sun)</li>
+                <li>게임은 항해 중 줄이 짧을 때가 종종 있지만, 점심은 시간 지나면 무조건 만석</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-time">13:30 방 입실 + 문꾸 + 픽시</span>
+          <div class="tl-body">
+            방은 공식 1:30 오픈이지만 실제로는 <strong>1:35~1:40에 캐리어 도착</strong>. 도착하자마자 ①문꾸(문에 자석·데코 붙이기) ②픽시더스트 첫 배포 ③출항파티 1회차 영상 관람 순서가 황금 동선(듀듀).
+            <div class="quote">
+              <div class="quote-text">밥 먹고 딱 방 들어갈 수 있어서 짐 내려놓고 문꾸 해놓고 출항파티 1회차 공연 보니 붐비지 않고 좋았음. 마지막 공연 때는 사람들 바글바글했음. 그리고 일찍 문꾸하니 선물도 빨리 받음.</div>
+              <span class="quote-author">듀듀 (4/13~16 항차)</span>
+            </div>
+            <div class="box box-warn">
+              <span class="box-icon">⚠️ 함정 2 — 프리기프트 사냥꾼</span>
+              <ul>
+                <li>문 앞에 두는 <strong>프리기프트(자유 증정용)는 5분 안에 사라짐</strong>. 비추 (엘로이)</li>
+                <li>본인 픽시더스트는 항차 4박 기준 <strong>80~130개 정도가 적정</strong> (인어니모, 애나벨, Sun, naldo)</li>
+                <li>첫날에 너무 많이 뿌리면 후반에 좋은 게 와도 보답 못함 (naldo)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-time">15:30 머스터드릴 (안전훈련) 후</span>
+          <div class="tl-body">
+            머스터드릴 끝나면 <strong>그리팅·롤코 예약창이 한 번 더 오픈</strong>되는 경향. 단, 항차마다 다르고 30초 컷으로 마감되는 경우 많음. 새로고침 무한반복이 정석(애나벨).
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-time">16:30 ~ 17:30 출항 파티 (가든)</span>
+          <div class="tl-body">
+            가든뷰 객실의 진가가 발휘되는 시간. <strong>방에서 문만 열면 관람 가능</strong>. 다른 객실은 가든이 매우 붐빔.
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-time">18:30 / 20:30 첫 정찬</span>
+          <div class="tl-body">
+            자동 배정된 디너 시간이 일행과 다르면 <strong>탑승 직후 7층에서 변경 가능</strong>(김남순). 첫날부터 정찬 메뉴 풀로 주문해도 OK. 어드벤처호 시스템은 코스 메뉴를 한 번에 받는 방식이라 <strong>처음 주문할 때 넉넉히 시키는 게 핵심</strong>(주누팜).
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-time">21:00 ~ 22:30 첫날 와이파이 + 자연 알림</span>
+          <div class="tl-body">
+            첫날 출항 후 <strong>오후 4:30까지는 무료 와이파이</strong>로 데이터 사용 가능, 이후 끊김(리틀새론). 단 <strong>카톡·메신저 알림 미리보기는 와이파이 안 사도 계속 뜸</strong>. 답장은 불가하지만 내용 확인 가능.
+            <div class="box box-tip">
+              <span class="box-icon">💡 한국 핸드폰 시간 문제</span>
+              <ul>
+                <li>첫날 밤 시간대 변경됨. 핸드폰별로 자동 변경 여부 달라서 가족끼리 시간이 안 맞을 수 있음</li>
+                <li>헷갈리면 <strong>디즈니 앱 왼쪽 위 시간이 정답</strong> (애나벨)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ====================================================== -->
+  <!-- 02 사전예약 전쟁                                        -->
+  <!-- ====================================================== -->
+  <div class="section-card" id="sec02">
+    <div class="sec-header collapsed">
+      <span class="sec-num">02</span>
+      <span class="sec-title">⚡ 사전예약 전쟁 — 롤코, 로얄게더링, 그리팅</span>
+      <span class="sec-toggle">▾</span>
+    </div>
+    <div class="sec-body collapsed">
+      <div class="contributor-strip">
+        <strong>주요 출처</strong> · 엘로이(4.2), 애나벨(3/26), 카할라(3/26), 주누팜(3/26), 듀듀(4/13), 햅삐햅삐(4.09), Sun(4/20), 주누팜(3/26)
+      </div>
+
+      <div class="box box-warn">
+        <span class="box-icon">🚨 결론부터 — 이건 정말 한 판 전쟁임</span>
+        <ul>
+          <li><strong>아이언테스트런(롤코)</strong>: 30초 컷, 항차당 못 탄 사람이 절반 이상. 예약 성공 = 운+집요함</li>
+          <li>예약 성공한 사람만 탑승 가능, <strong>방당 공유 X · 같이 탑승도 X</strong> — 각자 예약 필요</li>
+          <li>마이플랜 → 어트랙션 경로는 로딩 길어서 실패율 높음 → <strong>홈화면 → 온보드펀 → 어트랙션</strong>이 빠름</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">🎢 아이언테스트런 (롤러코스터) 예약 SOP</h3>
+      <p style="font-size:13px; color:var(--text-muted); margin-bottom:10px;">엘로이(4.2)와 햅삐햅삐의 실전 공략을 정리한 시퀀스.</p>
+      <ol class="bullet-list" style="counter-reset:n;">
+        <li><strong>준비</strong>: 오후 4시쯤부터 와츠앱 단톡에서 누가 떴다고 외치면 본격 시작 시간</li>
+        <li><strong>경로 고정</strong>: 디즈니 앱 → 홈화면의 <em>온보드펀</em>(My Plan의 Add Onboard Fun 아님!) → <em>어트랙션</em> → 아이언테스트런</li>
+        <li><strong>리프레시 패턴</strong>: 매시 <strong>정각 / 30분</strong>에 슬롯 열림, <strong>29분 / 59분</strong>에 사람들 취소분이 풀림 → 시간 직전부터 리프레시 반복</li>
+        <li><strong>비활성→활성 토글</strong>: 비활성 상태면 다시 어트랙션 페이지로 빠져나와 재진입. 활성 보이면 즉시 시간 선택 → 최종 예약 버튼</li>
+        <li><strong>튕김 대비</strong>: 최종 예약 단계에서 자주 튕김. 한번에 안 된다고 포기 X, 같은 시간대 다시 시도</li>
+      </ol>
+
+      <div class="box box-tip">
+        <span class="box-icon">💡 가족 모두 태우고 싶다면</span>
+        <ul>
+          <li><strong>각자 예약 따로</strong> — 한 명 성공해도 같이 못 탐 (다른 가족 데려가는 것도 안 됨)</li>
+          <li>왓츠앱 단톡에서는 <strong>아빠 + 딸 둘만 성공한 케이스</strong>도 흔함</li>
+          <li>실제 운행 시작은 보통 둘째날부터, 첫째날은 테스트만 (리틀새론)</li>
+        </ul>
+      </div>
+
+      <div class="quote">
+        <div class="quote-text">아이언테스트런은 말했던것처럼 욕나오니 포기하고 즐기고 오시던지 저처럼 스트레스 받으면서 욕하면서 예약하셔야 합니다.</div>
+        <span class="quote-author">주누팜 (3/26 항차)</span>
+      </div>
+
+      <h3 class="h2">👸 로얄 게더링 (Royal Gathering)</h3>
+      <ul class="bullet-list">
+        <li><strong>탑승 직후 앱에서 가장 먼저 잡아야 할 항목.</strong> 신데렐라·라푼젤·티아나(또는 인어공주 등) 3명 — 매일 <strong>랜덤 3명</strong></li>
+        <li>일찍 탑승해서 머스터드릴 전 → 잡을 확률 가장 높음. 보딩 10번이어도 11:30 도착하면 성공 사례 (애나벨)</li>
+        <li>4/13~16 항차 등 일부에서는 <strong>탑승 전 사전 와이파이 예약이 막힘</strong> → 게스트 데스크에서 직접 요청 필요 (듀듀)</li>
+        <li>4월 후반은 보통 <strong>오후 4:30~5시쯤</strong> 예약창이 자주 열렸음 (밍밍, 4/16)</li>
+        <li>같은 공주 3명이 4박 내내 고정 출연 (콤콤현, 3/19) — 캐릭터별로 출연 항차 시즌별 다름</li>
+      </ul>
+
+      <div class="quote">
+        <div class="quote-text">머스터드릴 끝나고 안 열림.. 새로고침 무한반복해서 너무 화났는데 저녁 1부 가기 직전에 열려서 셸리메이 빼고 다 예약함. 앱 다운됨.</div>
+        <span class="quote-author">애나벨 (3/26 항차)</span>
+      </div>
+
+      <h3 class="h2">🎭 캐릭터 미트앤그릿 vs 자연 출몰</h3>
+      <p style="font-size:13px; margin-bottom:10px;">3월 후반부터 4월 후반 항차들의 공통된 결론은 명확함.</p>
+      <div class="box box-green">
+        <span class="box-icon">✅ 자연 출몰 위주 전략 추천</span>
+        <ul>
+          <li><strong>미트앤그릿(예약 줄)은 칼같이 짧음</strong>: 가족당 사진 한 번, 공주도 디즈니파크처럼 길게 얘기 안 함 (애나벨)</li>
+          <li>자연 출몰은 <strong>충분히 자주, 길이는 길게</strong> 가능</li>
+          <li>특히 컨시어지룸이면 라운지에서 매일 캐릭터 출몰 (카할라 18가지 후기 참고)</li>
+        </ul>
+      </div>
+
+      <div class="box box-tip">
+        <span class="box-icon">📍 자연 출몰 핫스팟 (4박 후기 종합)</span>
+        <ul>
+          <li><strong>7층 TWG / 바샤커피 / 비비부 / D라운지 근처</strong> — 캐릭터들 출퇴근 동선. 공주·인형 캐릭터 자주 (콤콤현, 듀듀)</li>
+          <li><strong>17층 어벤져스 풀데크</strong> — 어벤져스 캐릭터, 그룻도 (애나벨)</li>
+          <li><strong>15층 샌프란소쿄</strong> — 베이맥스 단독 출몰 (카할라)</li>
+          <li><strong>6층 극장 근처</strong> — 공연 전후 (듀듀)</li>
+          <li>저녁 시간 공주 출몰, 미키마우스 친구들이 나오면 공주는 안 나옴 (콤콤현)</li>
+          <li><strong>마지막날 밤 — 죄다 출몰</strong> (콤콤현)</li>
+        </ul>
+      </div>
+
+      <div class="box box-warn">
+        <span class="box-icon">⚠️ 노쇼 주의</span>
+        <ul>
+          <li>예약해놓고 노쇼하면 <strong>해당 캐릭터는 재예약 불가</strong> (날탱양 3/23 검증)</li>
+          <li>못 갈 것 같으면 반드시 취소 → 다시 예약</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">📌 통합 예약 순위 (실탑승자 추천)</h3>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr><th>우선순위</th><th>항목</th><th>난이도</th><th>예약 타이밍</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="tag tag-must">1순위</span></td><td>로얄 게더링</td><td>중</td><td>탑승 직후 11:30~12:30</td></tr>
+            <tr><td><span class="tag tag-must">2순위</span></td><td>아이언테스트런 (롤코)</td><td>상</td><td>1~3일차 14:00~18:00 사이 수시</td></tr>
+            <tr><td><span class="tag tag-paid">3순위</span></td><td>비비디 / 마블 스튜디오</td><td>중</td><td>온라인 사전 결제 단계</td></tr>
+            <tr><td><span class="tag tag-paid">4순위</span></td><td>포토 패키지</td><td>하</td><td>사전 결제가 현장 구매보다 저렴</td></tr>
+            <tr><td><span class="tag tag-ok">5순위</span></td><td>캐릭터 미트앤그릿 예약</td><td>중</td><td>오픈 즉시. 단 자연출몰로 갈음 가능</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ====================================================== -->
+  <!-- 03 객실 선택의 진실                                     -->
+  <!-- ====================================================== -->
+  <div class="section-card" id="sec03">
+    <div class="sec-header collapsed">
+      <span class="sec-num">03</span>
+      <span class="sec-title">🛏️ 객실 선택의 진실 — 가든뷰·오션뷰·인사이드 실제 후기</span>
+      <span class="sec-toggle">▾</span>
+    </div>
+    <div class="sec-body collapsed">
+      <div class="contributor-strip">
+        <strong>주요 출처</strong> · 김남순(3/13 가든뷰), 미미랜드(3/13 인사이드), 콤콤현(3/19 11층 가든뷰), 박재영(3/19 오션뷰), 카할라(3/26 컨시), 주누팜(3/26 15층 FWD), 애나벨(3/26 12층 6B미드), 듀듀(4/13 D1 가든), Sun(4/20 12층 가든스테이지)
+      </div>
+
+      <h3 class="h2">📊 실탑승자 객실 만족도 (4박 기준 종합)</h3>
+      <p style="font-size:12.5px; color:var(--text-muted); margin-bottom:10px;">3~5월 항차 후기 정성 평가를 1~10 스케일로 정리. 같은 카테고리도 층/위치에 따라 격차 큼.</p>
+      <div style="background:#fafbfc; border:1px solid var(--border); border-radius:8px; padding:14px; margin-bottom:14px;">
+        <div class="rating-row"><span>오션뷰 베란다 (미드)</span><div class="rating-bar"><div class="rating-fill" style="width:92%"></div></div><span class="rating-score">9.2</span></div>
+        <div class="rating-row"><span>컨시어지 베란다 (18층)</span><div class="rating-bar"><div class="rating-fill" style="width:96%"></div></div><span class="rating-score">9.6</span></div>
+        <div class="rating-row"><span>가든 스테이지뷰 (12층, 공연방향)</span><div class="rating-bar"><div class="rating-fill" style="width:88%"></div></div><span class="rating-score">8.8</span></div>
+        <div class="rating-row"><span>가든뷰 일반 (11층 양호)</span><div class="rating-bar"><div class="rating-fill" style="width:74%"></div></div><span class="rating-score">7.4</span></div>
+        <div class="rating-row"><span>인사이드 디럭스</span><div class="rating-bar"><div class="rating-fill" style="width:78%"></div></div><span class="rating-score">7.8</span></div>
+        <div class="rating-row"><span>웨이파인더(모아나) 뷰</span><div class="rating-bar"><div class="rating-fill" style="width:65%"></div></div><span class="rating-score">6.5</span></div>
+        <div class="rating-row"><span>리프뷰</span><div class="rating-bar"><div class="rating-fill" style="width:55%"></div></div><span class="rating-score">5.5</span></div>
+      </div>
+
+      <h3 class="h2">🌿 가든뷰 — 호불호 극단적</h3>
+      <p style="font-size:13px; margin-bottom:10px;">가든뷰는 후기가 가장 갈리는 카테고리. 위치(층·전후방·공연방향)에 따라 만족도가 천차만별.</p>
+
+      <div class="quote">
+        <div class="quote-text">다녀온 소감 가든뷰 돈 아까워요. 종일 햇볕에 지나가는 행인들 눈 높이라 최악이었어요. 날씨가 좋아 발코니에 아예 나가지 못하고 실내 시설 즐기느라 방에 있을 시간이 없더라고요.</div>
+        <span class="quote-author">김남순 (3/13~16, 11311호)</span>
+      </div>
+
+      <div class="quote">
+        <div class="quote-text">가든공연은 미리가서 기다릴 필요 전혀 없이 편하게 보고, 방에서 쉬다가 문만 열면 뭐 하고 있는거 구경하고. 아침에 거의 아무도 없을 때 가든도 너무 예뻐요! 낮에도 그늘져서 별로 안 더웠어요.</div>
+        <span class="quote-author">Sun (4/20~23, 12679호 가든스테이지뷰)</span>
+      </div>
+
+      <div class="quote">
+        <div class="quote-text">차멀미·배멀미 심한 편인데 멀미 전혀 없었음. 커넥팅룸 방음 양호 — 밖 베란다가 더 시끄럽고 닫으면 괜찮음.</div>
+        <span class="quote-author">콤콤현 (3/19~23, 11층 가든뷰)</span>
+      </div>
+
+      <div class="box box-tip">
+        <span class="box-icon">💡 가든뷰 선택 가이드 (후기 통합)</span>
+        <ul>
+          <li><strong>공연 정면뷰 객실</strong>이라면 강력 추천 — Sun(12679), 콤콤현 사례</li>
+          <li>일반 가든뷰는 <strong>11층 이상 + 무대 측면이 아닌 정면 방향</strong>이 핵심</li>
+          <li>13323/13327같은 D1 객실은 <strong>D라운지 머스터드릴 공간 위 — 공연 안 보임</strong> (듀듀)</li>
+          <li>예약 시 <strong>"View More Options" 클릭 → 가든 공연 정면뷰 명시된 방 선택</strong> 필수</li>
+          <li>창문 닫으면 방음 양호하지만, 첫날은 10~11시까지 시끄러움 (듀듀)</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">🌊 오션뷰 — 무난한 정답</h3>
+      <div class="quote">
+        <div class="quote-text">발코니 오션뷰로 했는데 개인적으로 오션뷰가 좋은 거 같아요! 오션뷰이신 분들은 아침 룸서비스로 한 번 먹으면 너무 좋을거 같아요! 바다 보면서 먹는데 너무 좋았어요. 무료이고 팁만 주시면 됩니다.</div>
+        <span class="quote-author">밤톨이22 (3/13~16, 15층 미드 오션뷰)</span>
+      </div>
+      <div class="quote">
+        <div class="quote-text">15층 중간 오션뷰 베란다 기준 밤에 소파베드 누우면 흔들리는게 너무 느껴져서 하루만 자고 나머진 제가 침대에서 잤어요.</div>
+        <span class="quote-author">naldo (3/26, 15층 중간 오션뷰)</span>
+      </div>
+
+      <h3 class="h2">🏢 인사이드 — 의외로 가성비</h3>
+      <div class="quote">
+        <div class="quote-text">앱에서 설문조사 할 때 즐길거리 부분, 불꽃놀이도 밋앤그릿도 어벤져스도 아무것도 안 하고 그저 수영만 하다 온 인사이드 초등 고학년 3명 그래도 만족했다고 합니다.</div>
+        <span class="quote-author">미미랜드 (3/13, 인사이드)</span>
+      </div>
+      <div class="quote">
+        <div class="quote-text">멀미약 바리바리 싸갔는데 배 출발 한 것도 몰랐고 (인사이드 디럭스), 잘 때 저만 살짝 꿀렁거리는 느낌 미세하게 받았고 멀미 느낌은 1도 없었고.</div>
+        <span class="quote-author">소나기 (3/23~26, 인사이드 디럭스)</span>
+      </div>
+
+      <h3 class="h2">🌆 컨시어지 — 알콜러버 + 손 안 가는 아이 조합이면 OK</h3>
+      <p style="font-size:13px; margin-bottom:8px;">컨시어지 18가지 진짜 후기는 <a href="#sec09" style="color:var(--blue-accent); font-weight:600; text-decoration:none;">섹션 09</a>에 별도 정리.</p>
+      <div class="quote">
+        <div class="quote-text">컨시 라운지에서 최대한 뻐기다가 쫓겨나고 스윗소텔 체크인했네요. 멀리 디즈니 크루즈가 보이는데 또 타고 싶네요. 컨시어지 돈 아깝지 않을 정도로 만족도 좋았습니다.</div>
+        <span class="quote-author">카할라 (3/26~30, 컨시어지)</span>
+      </div>
+
+      <h3 class="h2">📍 층 / 전·후·중 선택 가이드</h3>
+      <div class="box box-gold">
+        <span class="box-icon">📋 객실 위치 결정 매트릭스</span>
+        <ul>
+          <li><strong>층 (가능한 한 높이)</strong>: 11층 이상이면 17층 픽사 뷔페·수영장 접근성 우수. 단, 10층 vs 11층은 큰 차이 없음 (브라더 후기)</li>
+          <li><strong>11층의 작은 장점</strong>: 가든 출입문 + 엘베·계단 양쪽 가까움 (써니)</li>
+          <li><strong>미드(MID) vs 포워드(FWD) vs 애프트(AFT)</strong>: 미드가 무난한 정답. 멀미 영향도 적음 (밤톨이, 주누팜)</li>
+          <li><strong>15층 FWD</strong>: 8층 키즈카페·17층 음료 가까움. 단, 앞뒤 이동 동선 많아짐 (주누팜)</li>
+          <li><strong>고학년 아이</strong>: AFT 쪽 추천 — 7층 샌프란소쿄 안 Edge(11~14세 유스클럽) 접근성 (싱어게인)</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">🛏️ 객실 내부 — 알아두면 좋은 것</h3>
+      <ul class="bullet-list">
+        <li><strong>드라이기는 매우 매우 불만족.</strong> 머리 길고 양 많은 분은 개인 드라이기 지참 (애나벨, 듀듀) — 헤어 관련 전열기구는 반입 가능</li>
+        <li><strong>침대 매우 높음</strong> — 영유아 낙상 주의. 가드 신청해도 못 받는 경우 흔함 (밍밍은 200일 전부터 신청·메일 확인까지 했지만 못 받음)</li>
+        <li>침대 가드 대신 <strong>두꺼운 베개로 대체</strong>되는 경우 있음 — 침대 좁아짐 (밍밍)</li>
+        <li><strong>소파베드</strong>는 첫날 호스트가 침대로 둘지/낮엔 접을지 물어봄. 접어달라 하고 저녁에 펴달라 요청 가능 (박재영)</li>
+        <li><strong>방에 잔이 없음</strong>. 와인잔·샴페인잔은 룸서비스에 요청 (리틀새론)</li>
+        <li><strong>냉장고 비어있음</strong> — 면세 와인·샴페인 병째 보관 가능</li>
+        <li><strong>옷걸이 20개 정도 충분</strong>, 코드 충분, 빨래줄(수영 잦을 시) 챙기면 1시간 안에 마름 (박재영)</li>
+        <li><strong>방에는 메뉴판 없음</strong> — 룸서비스 메뉴는 앱에서만 확인</li>
+        <li>방에 28인치 캐리어 2개 펼친 채로 침대 아래 수납 가능 (미미랜드)</li>
+      </ul>
+
+      <div class="box box-warn">
+        <span class="box-icon">⚠️ 객실 컨셉(스파이더맨/모아나/공주 등) 함정</span>
+        <ul>
+          <li><strong>방 컨셉 1분이면 감흥 없어짐</strong> — 액자 두 개 정도, 벽화 위주 (푸딩딩, 주누팜)</li>
+          <li>방 컨셉보다 <strong>뷰·위치·층</strong> 우선 추천</li>
+          <li>웨이파인더(모아나) 뷰는 <strong>저녁 6시마다 영화 상영</strong>이라는 깨알 장점 있음 (애나벨)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ====================================================== -->
+  <!-- 04 음식 가성비 랭킹                                     -->
+  <!-- ====================================================== -->
+  <div class="section-card" id="sec04">
+    <div class="sec-header collapsed">
+      <span class="sec-num">04</span>
+      <span class="sec-title">🍽️ 음식 가성비 랭킹 — 실제 먹어본 사람들의 평가</span>
+      <span class="sec-toggle">▾</span>
+    </div>
+    <div class="sec-body collapsed">
+      <div class="contributor-strip">
+        <strong>주요 출처</strong> · 애나벨(3/26 음식 디테일), 주누팜(3/26 대식가 후기), 밤톨이22(3/13), naldo(3/26), 밍밍(4/16), 듀듀(4/13), 엘로이(4.2), 인어니모(4.16), 카할라(3/26 컨시)
+      </div>
+
+      <div class="box box-gold">
+        <span class="box-icon">🏆 한 줄 결론</span>
+        <ul>
+          <li><strong>퀵서비스(특히 10층) ≥ 정찬 > 뷔페</strong> 가성비 순</li>
+          <li>정찬은 <strong>"기대 안 하고 먹으면 괜찮음"</strong>이 공통 평. 단 코스로 한 번에 시켜서 처음 주문할 때 넉넉히 시켜야 함</li>
+          <li><strong>치즈피자(피자플래넷)는 반드시 먹을 것</strong> — 거의 모든 후기에서 강추</li>
+          <li><strong>오하나그릴 고추장버거</strong>는 한국인 입맛 최강 메뉴 (밍밍 "최소 3번 드세요")</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">🥇 실탑승자 종합 랭킹 — 음식 만족도</h3>
+      <div style="background:#fafbfc; border:1px solid var(--border); border-radius:8px; padding:14px; margin-bottom:14px;">
+        <div class="rating-row"><span>피자플래넷 치즈피자</span><div class="rating-bar"><div class="rating-fill" style="width:96%"></div></div><span class="rating-score">9.6</span></div>
+        <div class="rating-row"><span>오하나그릴 고추장버거·훌리훌리버거</span><div class="rating-bar"><div class="rating-fill" style="width:94%"></div></div><span class="rating-score">9.4</span></div>
+        <div class="rating-row"><span>10층 가든·리프 퀵서비스 (인도·케밥·그릴)</span><div class="rating-bar"><div class="rating-fill" style="width:90%"></div></div><span class="rating-score">9.0</span></div>
+        <div class="rating-row"><span>오하나그릴 핫도그</span><div class="rating-bar"><div class="rating-fill" style="width:88%"></div></div><span class="rating-score">8.8</span></div>
+        <div class="rating-row"><span>스낵코너 (포션 등)</span><div class="rating-bar"><div class="rating-fill" style="width:85%"></div></div><span class="rating-score">8.5</span></div>
+        <div class="rating-row"><span>정찬 — 스테이크·관자·타이 보트누들</span><div class="rating-bar"><div class="rating-fill" style="width:82%"></div></div><span class="rating-score">8.2</span></div>
+        <div class="rating-row"><span>정찬 — 일반 메뉴 평균</span><div class="rating-bar"><div class="rating-fill" style="width:65%"></div></div><span class="rating-score">6.5</span></div>
+        <div class="rating-row"><span>픽사 뷔페</span><div class="rating-bar"><div class="rating-fill" style="width:60%"></div></div><span class="rating-score">6.0</span></div>
+        <div class="rating-row"><span>인챈티드 뷔페</span><div class="rating-bar"><div class="rating-fill" style="width:55%"></div></div><span class="rating-score">5.5</span></div>
+        <div class="rating-row"><span>룸서비스</span><div class="rating-bar"><div class="rating-fill" style="width:50%"></div></div><span class="rating-score">5.0</span></div>
+        <div class="rating-row"><span>정찬 — 면 요리 (간 안 맞음)</span><div class="rating-bar"><div class="rating-fill" style="width:45%"></div></div><span class="rating-score">4.5</span></div>
+      </div>
+      <p style="font-size:11px; color:var(--text-muted); margin-bottom:14px;">* 평균값 표시는 정보 단순화 결과로, 메뉴별·항차별 편차가 큼. 절대 평가가 아닌 후기 분포의 중심을 보는 기준으로 활용.</p>
+
+      <h3 class="h2">🍕 퀵서비스 — 사실상 정답</h3>
+      <div class="quote">
+        <div class="quote-text">10층 가든과 리프에 있는 퀵서비스 4개가 맛있었음!! 오하나그릴 버거 👍, 모글리(인도음식): 다 맛있음 두 번 감, 그랜마탈라 👍, 케밥 👍. 피자플래넷 치즈피자 맛있었구 18층 인피니티바 핫도그 못 먹었으나 특별히 아쉬움은 없음.</div>
+        <span class="quote-author">애나벨 (3/26 항차)</span>
+      </div>
+      <div class="quote">
+        <div class="quote-text">햄버거는 일반 레스토랑에서는 다소 아쉬웠고, 오히려 10층 퀵메뉴에서 파는 핫도그와 햄버거가 훨씬 맛있었습니다. 완전히 다른 음식이라고 느껴질 정도였습니다.</div>
+        <span class="quote-author">주누팜 (3/26 항차)</span>
+      </div>
+      <div class="box box-tip">
+        <span class="box-icon">💡 피자플래넷 운영 팁</span>
+        <ul>
+          <li>치즈피자 / 페퍼로니 / 마르게리타 / BBQ치킨 / 포치즈 라인업</li>
+          <li>줄 40분+면 그 정도 맛은 아님. 보통 <strong>14:00~16:00 사이에 한산</strong> (엘로이)</li>
+          <li>20분 이내 대기면 추천</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">🍽️ 정찬 (Rotational Dining) — 코스 풀세트 주문 전략</h3>
+      <p style="font-size:13px; margin-bottom:8px;">애니메이터 테이블 / 인챈티드 / 헐리우드 / 월드오브원더 등 4박이면 보통 4개 식당 로테이션. 정찬 시스템의 핵심 규칙은 다음.</p>
+      <div class="box box-warn">
+        <span class="box-icon">⚠️ 정찬 주문의 함정</span>
+        <ul>
+          <li><strong>추가 주문 자유롭지 않음</strong> — 처음 주문할 때 넉넉히 시키는 게 핵심 (주누팜)</li>
+          <li>스몰플레이트는 양이 굉장히 적음 → 2개씩 시키는 것도 옵션</li>
+          <li>스테이크류는 가장 안정적, <strong>고기 메뉴는 2개 이상 시켜라</strong> (주누팜)</li>
+          <li>치킨류는 죄다 가슴살. 면 요리는 간이 안 맞는 경우 多 (naldo)</li>
+        </ul>
+      </div>
+      <div class="box box-tip">
+        <span class="box-icon">💡 정찬 베스트 메뉴 (실 추천)</span>
+        <ul>
+          <li><strong>타이 보트 누들</strong> · 똠얌 베이스 면요리 — 거의 모든 후기에서 등장</li>
+          <li><strong>관자 요리</strong> (보통 첫날 코스에 등장)</li>
+          <li><strong>스테이크류</strong></li>
+          <li>디저트 시 "미키바 아이스크림" 메뉴에 없어도 요청하면 줌 (밤톨이22)</li>
+          <li>와인 패키지 첫날 사서 디너랑 — 다 안 마시면 다음날까지 보관 (애나벨)</li>
+        </ul>
+      </div>
+      <p style="font-size:12.5px; color:var(--text-muted); margin-bottom:14px;">정찬은 자동 배정 후 변경 가능. 일행 시간 다르면 탑승 직후 7층에서 변경 (김남순).</p>
+
+      <h3 class="h2">🍳 뷔페 — 픽사 > 인챈티드</h3>
+      <ul class="bullet-list">
+        <li>오프닝 시간: <strong>17층 픽사는 오전 7시 시작</strong> (브라더 후기)</li>
+        <li>점심 시간엔 매우 붐빔 → 가능하면 빠르게 다녀오기</li>
+        <li>커피는 평이함 — <strong>카누 등 인스턴트 챙기는 사람 많음</strong> (밤톨이22)</li>
+        <li>스티키 라이스 있어서 <strong>김·김자반 챙기면 한식파 아이 식음 전폐 방지</strong> (듀듀)</li>
+        <li>키즈밀은 감자튀김 과다 — 미리 빼달라 요청 가능 (naldo)</li>
+        <li>키즈 메뉴는 어른 메뉴보다 간이 짠 편 → 무염식 아이는 <strong>iceberg salad 치킨/연어 + 밥 따로 요청</strong> (밍밍)</li>
+      </ul>
+
+      <h3 class="h2">☕ 무료로 마실 수 있는 것</h3>
+      <div class="box box-green">
+        <span class="box-icon">✅ 무료 음료 (24시간 또는 영업시간 내)</span>
+        <ul>
+          <li>탄산음료, 주스, 커피, 차 (자판기 형식·셀프) — 17층, 일부 11층 라운지</li>
+          <li>방에 바샤커피 8팩 기본 제공 + 리필 요청 가능 (식당·풀바 커피보다 훨씬 맛있음 / 써니, 카할라)</li>
+          <li>음수대 물 음용 가능</li>
+          <li><strong>18층 인피니티바 핫도그 무료</strong> (밤톨이22, 애나벨)</li>
+        </ul>
+      </div>
+      <div class="box box-warn">
+        <span class="box-icon">💰 유료 (가격 인지 필요)</span>
+        <ul>
+          <li>풀사이드 바의 칵테일/와인/맥주 — 모두 유료. 서비스 차지 18% 자동 추가</li>
+          <li>TWG, 바샤커피 매장에서 별도 주문 시 유료 + 서비스 차지</li>
+          <li>버블티 ~$5-7. 우슬라 버블티집도 테이크아웃에 서비스 차지 (듀듀)</li>
+          <li>주류 바틀 구매 시 $100+ (카할라)</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">🥡 룸서비스 — 큰 기대 X</h3>
+      <ul class="bullet-list">
+        <li>메뉴 매우 적음, 전화 연결 오래 걸림 (40분~1시간 잡고) — 엘로이</li>
+        <li>아침 룸서비스는 <strong>오션뷰면 추천</strong> — 바다 보면서 식사 (밤톨이22)</li>
+        <li>무료. 팁만 $1~2 (꼬다자매맘)</li>
+        <li>밤에 다른 식당 음식 받아서 방에서 먹는 것이 더 만족도 높음</li>
+      </ul>
+
+      <div class="quote">
+        <div class="quote-text">조중석식 말고 스낵코너에 나오는 음식들 다 맛있어서 하나씩 다 드셔보세요^^</div>
+        <span class="quote-author">쿠루즈 (3/19~23 항차)</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ====================================================== -->
+  <!-- 05 공연 자리잡기                                        -->
+  <!-- ====================================================== -->
+  <div class="section-card" id="sec05">
+    <div class="sec-header collapsed">
+      <span class="sec-num">05</span>
+      <span class="sec-title">🎭 공연 자리잡기 전략 — 자동예약 vs 줄서기</span>
+      <span class="sec-toggle">▾</span>
+    </div>
+    <div class="sec-body collapsed">
+      <div class="contributor-strip">
+        <strong>주요 출처</strong> · 밤톨이22(3/13 공연 강추), 박재영(3/19 감동), 쿠루즈(3/19), 애나벨(3/26 디테일), 주누팜(3/26 모아나 위에서), 카할라(3/26 컨시), 듀듀(4/13 가든), 밍밍(4/16 어벤져스 17층), 엘로이(4.2 줄 팁)
+      </div>
+
+      <div class="box box-gold">
+        <span class="box-icon">⭐ 공연이 사실상 어드벤처호의 본체</span>
+        <ul>
+          <li><strong>"공연이 특히 너무 좋아서 그것만으로도 본전 뽑는다"</strong> — 밤톨이22, 박재영, 듀듀 등 다수 일치</li>
+          <li>모아나 공연은 "안 봐도 아쉬움 없음" 후기와 "꼭 봐라" 후기 갈림. 더운 야외라 컨디션과 시즌 영향</li>
+          <li><strong>리멤버 쇼는 무조건 보고 무조건 일찍 줄서야 함</strong> — 1시간 권장 (써니, 쿠루즈)</li>
+          <li>어벤져스 어셈블도 매우 호평. 마지막 날 직전 시간대가 알맞음 (애나벨, 밍밍)</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">📅 공연 종류와 자동예약 여부</h3>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr><th>공연</th><th>장소</th><th>자동예약</th><th>실 후기 평점</th><th>핵심 팁</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>리멤버 (Remember)</strong></td><td>월트 디즈니 씨어터</td><td>O (디너 시간 연동)</td><td>⭐⭐⭐⭐⭐</td><td>1시간 전 줄. 앞쪽 중앙 사수 — 콘페티·버블이 머리 위로</td></tr>
+            <tr><td><strong>씨즈 디 어드벤처</strong></td><td>월트 디즈니 씨어터</td><td>O</td><td>⭐⭐⭐⭐</td><td>오후 2시 공연. 자리 안 좋아도 재밌음 (푸딩딩)</td></tr>
+            <tr><td><strong>모아나 (Moana)</strong></td><td>가든 (야외)</td><td>X</td><td>⭐⭐⭐</td><td>더우니 위층(17층)에서 내려다보는 것도 옵션 (주누팜). 인어공주 비눗방울 앞자리만 맞음</td></tr>
+            <tr><td><strong>어벤져스 어셈블</strong></td><td>가든 (야외)</td><td>X (하루 2타임)</td><td>⭐⭐⭐⭐⭐</td><td>마지막날 6:15 추천, 앞줄 4:30 도착 / 또는 17층 난간에서 (밍밍, 카할라)</td></tr>
+            <tr><td><strong>출항 파티 (Let's Set Sail)</strong></td><td>가든</td><td>X (첫날 4타임 30분씩)</td><td>⭐⭐</td><td>스킵해도 큰 아쉬움 없음. 1차가 가장 한적 (애나벨)</td></tr>
+            <tr><td><strong>호퍼스 (Hoopers)</strong></td><td>씨어터</td><td>X (하루 다회)</td><td>⭐⭐⭐</td><td>의외로 자리 없을 때 있음 (애나벨)</td></tr>
+            <tr><td><strong>불꽃놀이</strong></td><td>17층 + 베란다</td><td>X (둘째날 밤)</td><td>⭐⭐⭐⭐⭐</td><td>17층 추천. 배 끝 바라보고 오른쪽이 좋음 (써니). 13층 베란다도 우현 잘 보임 (주누팜)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="h2">⏱ 리멤버 쇼 자리 잡기 SOP</h3>
+      <ul class="bullet-list">
+        <li><strong>1시간 전 도착 권장</strong> — 가능하면 앞쪽 중앙. 컨페티·버블이 떨어지는 자리</li>
+        <li>앞쪽 두 번째 줄 사이드여도 무대가 앞까지 내려와서 잘 보임 (듀듀)</li>
+        <li>컨시어지 우선입장은 40분 전부터 → 50분 전 가면 앞쪽 3번째 가운데 가능 (카할라)</li>
+        <li>맨 앞 가운데는 컨시어지도 1시간 전에는 가야 함</li>
+      </ul>
+      <div class="box box-tip">
+        <span class="box-icon">💡 다른 공연 줄서기 꿀팁</span>
+        <ul>
+          <li><strong>씨어터 공연은 끝나고 잽싸게 다음 회차 줄서면 3등도 가능</strong> (엘로이)</li>
+          <li>가든 공연(어벤져스)은 4:30 도착이면 맨 앞줄. 다들 앉아서 보는 거라 너무 일찍 안 가도 됨</li>
+          <li>가든 공연 시 — 미키목마 태우고 11층 본 사람의 후회: <strong>17층이 훨씬 잘 보임</strong> (밍밍)</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">🎆 불꽃놀이 — 둘째 날 밤만 1회</h3>
+      <div class="quote">
+        <div class="quote-text">불꽃놀이는 우현 쪽 13층 발코니에서 매우 잘 보였다고 들었고, 저는 17층에서 관람했습니다. 규모가 아주 크지는 않았지만 음악에 맞춰 연출되는 점이 좋았습니다.</div>
+        <span class="quote-author">주누팜 (3/26 항차)</span>
+      </div>
+      <ul class="bullet-list">
+        <li><strong>17층 수영장 옆 추천</strong> — 컨시어지가 별도 선덱에서 보지만 소리가 안 들림 (카할라)</li>
+        <li><strong>우현 객실 베란다</strong>에서도 잘 보임 — 객실 선택 시 우현 가능하면 우선</li>
+        <li>유료 자리는 카할라 비추 — "별 의미 없음"</li>
+        <li>일찍 짐 싸야 하는 마지막 3일째 밤보단 <strong>이틀째가 피크</strong> (밤톨이22)</li>
+      </ul>
+
+      <h3 class="h2">🎤 작은 공연·체험도 무시하지 마세요</h3>
+      <ul class="bullet-list">
+        <li><strong>네비게이터 클럽 정찬</strong> 시 캐릭터 등장 + 노래 (밤톨이22)</li>
+        <li><strong>타올 폴딩 / 냅킨 폴딩</strong> — 가족 체험 추천 (애나벨)</li>
+        <li><strong>패밀리 가라오케·크래프트</strong> — 의외로 재미 (애나벨)</li>
+        <li><strong>빙고</strong>: 패드 24판 $60 / 48판 $100. 미리 자리 잡기 추천</li>
+        <li><strong>중간 정전 공연</strong>: 1회 정전 사고 사례 있었음 (3/26 항차) — 일반적 X</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ====================================================== -->
+  <!-- 06 캐릭터 실제 출몰 패턴                                -->
+  <!-- ====================================================== -->
+  <div class="section-card" id="sec06">
+    <div class="sec-header collapsed">
+      <span class="sec-num">06</span>
+      <span class="sec-title">👑 캐릭터 실제 출몰 패턴 — 시간·장소·확률</span>
+      <span class="sec-toggle">▾</span>
+    </div>
+    <div class="sec-body collapsed">
+      <div class="contributor-strip">
+        <strong>주요 출처</strong> · 콤콤현(3/19 공주 동선), 카할라(3/26 컨시 라운지), 날탱양(3/23 모든 테이블), 듀듀(4/13), 밍밍(4/16 신데렐라 뽀뽀), Sun(4/20)
+      </div>
+
+      <div class="box box-gold">
+        <span class="box-icon">🎯 캐릭터 핵심 원리</span>
+        <ul>
+          <li><strong>로얄 게더링 공주는 매일 랜덤 3명</strong>, 같은 조합 4박 내내 (콤콤현)</li>
+          <li><strong>미키·미니는 보통 둘째날부터 매일</strong>, 19~20시 사이 자주 출몰 (카할라)</li>
+          <li>공주들이 나오면 미키·미니는 안 나오는 시간대 규칙 (콤콤현)</li>
+          <li><strong>마지막 날 밤은 캐릭터 죄다 출몰</strong> — 못 본 캐릭터 회수 기회 (콤콤현)</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">📍 캐릭터별 출몰 동선 (4박 통합)</h3>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr><th>캐릭터</th><th>주요 출몰 위치</th><th>시간대</th><th>예상 대기</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>미키 · 미니</td><td>7층 TWG/바샤커피 근처, 컨시 라운지</td><td>둘째날+, 19:00~20:00</td><td>5분~</td></tr>
+            <tr><td>공주 (신데렐라·라푼젤 등)</td><td>7층 TWG 근처 / 6층 극장</td><td>저녁 시간대</td><td>최대 1시간</td></tr>
+            <tr><td>플루토 · 알라딘 · 구피</td><td>컨시 라운지, 7층 D라운지 근처</td><td>오후~저녁</td><td>거의 없음~30분</td></tr>
+            <tr><td>도널드 · 데이지</td><td>7층 비비부 입구 근처</td><td>오후 3시 / 저녁 7시 / 9시 30분</td><td>5~10분</td></tr>
+            <tr><td>베이맥스</td><td>15층 샌프란소쿄 (덩치상 다른 데 못 감)</td><td>오후~저녁</td><td>중간</td></tr>
+            <tr><td>어벤져스 (캡틴 · 그룻 · 스파이더맨)</td><td>17층 풀데크</td><td>오후 (더위 주의)</td><td>적음</td></tr>
+            <tr><td>더피 · 셸리메이</td><td>7층 비비부 근처</td><td>밋앤그릿 예약제</td><td>예약</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="h2">🎭 미트앤그릿(예약 줄) vs 자연 출몰 — 어느 쪽?</h3>
+      <div class="box box-tip">
+        <span class="box-icon">💡 비교 결과</span>
+        <ul>
+          <li><strong>미트앤그릿 (예약 줄)</strong>: 줄 짧음, 사진 가족당 1번 칼같음. 시간 짧음 (애나벨)</li>
+          <li><strong>자연 출몰</strong>: 충분히 천천히 가능. 사인북·소품 가져가면 적극적으로 반응해 줌 (듀듀)</li>
+        </ul>
+      </div>
+
+      <div class="quote">
+        <div class="quote-text">캐릭터들 멀리 앉아도 모든 테이블 앞에 와주세요 걱정 안 하셔도 돼요!!</div>
+        <span class="quote-author">날탱양 (3/23~26, 정찬 시)</span>
+      </div>
+
+      <h3 class="h2">🎁 캐릭터 그리팅 — 만남을 더 특별하게 만드는 법</h3>
+      <ul class="bullet-list">
+        <li><strong>코스튬 풀세트로 입히면 캐릭터들이 더 적극적</strong> — 캡틴 미키일 때 아이 손 잡고 돌아다닌 사례 (듀듀)</li>
+        <li><strong>사인북 + 펜 들고 다니면 밋앤그릿 외에도 사인 받기 가능</strong> (듀듀)</li>
+        <li>본인 팬인 캐릭터 관련 물품을 가져가면 캐릭터들이 감동 반응 (밍밍의 유리구두 사례)</li>
+        <li>마블 스튜디오에서 <strong>스파이더맨 거미줄 쏘기 장난감</strong> 판매 (파란색 남자아이용은 재고 따라 다름, 듀듀)</li>
+        <li><strong>비비부에서 캡틴 미키 시키려면 백구두 챙겨갈 것</strong> — 의상에 신발 없음 (밍밍)</li>
+      </ul>
+
+      <div class="quote">
+        <div class="quote-text">신데렐라와 결혼이 꿈인 만 4세 남아가 유리구두(아크릴)를 내밀며 This is for you 했더니 너무 감동받은 제스처를 하시더니 저희 아이에게 기습 볼뽀뽀를!!! 거기 있는 모든 사람이 환호를 질러주시고 카메라 플래쉬가 파파박 터지고 저희 아이는 황홀경에…</div>
+        <span class="quote-author">밍밍 (4/16 항차)</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ====================================================== -->
+  <!-- 07 수영장 동선                                          -->
+  <!-- ====================================================== -->
+  <div class="section-card" id="sec07">
+    <div class="sec-header collapsed">
+      <span class="sec-num">07</span>
+      <span class="sec-title">🏊 수영장·슬라이드 동선 최적화</span>
+      <span class="sec-toggle">▾</span>
+    </div>
+    <div class="sec-body collapsed">
+      <div class="contributor-strip">
+        <strong>주요 출처</strong> · 박재영(3/19 시간대 전략), 밤톨이22(3/13 햇빛), 미미랜드(3/13), 날탱양(3/23), 카할라(3/26 컨시 19층), 애나벨(3/26 48인치), 엘로이(4.2)
+      </div>
+
+      <div class="box box-gold">
+        <span class="box-icon">⏰ 핵심 — 아침 9~10시, 저녁 18시 이후</span>
+        <ul>
+          <li><strong>9시 오픈하자마자 1시간 바짝</strong> 노는 게 정답. 그늘 적고 슬라이드 대기 없음 (박재영)</li>
+          <li><strong>저녁 시간대(18:00 이후)</strong>는 시원해서 놀이기구·슬라이드 타기 좋음 (박재영)</li>
+          <li>낮 12~16시는 햇빛 죽음. 핸드폰 더위 먹어서 셧다운되는 경우도 (날탱양)</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">📊 시간대별 수영장 전략</h3>
+      <div class="timeline">
+        <div class="tl-item">
+          <span class="tl-time">07:00 ~ 08:30</span>
+          <div class="tl-body">조식 (픽사 뷔페는 7시 오픈, 17층 / 정찬 식당도 1부 6:10부터). 가벼운 조식 후 수영 준비.</div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-time">09:00 ~ 10:00 ⭐</span>
+          <div class="tl-body"><strong>수영장 오픈 1시간이 골든타임.</strong> 17층 메인풀 + 슬라이드 대기 거의 없음. 그늘 부족 → 래시가드·자외선차단제 필수.</div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-time">10:00 ~ 11:00</span>
+          <div class="tl-body">실내 캐릭터 미팅 또는 캐비나 자리잡기. 컨시어지는 19층 선덱 카바나 11~12시쯤 자리잡고 라운지에서 피자·풀바 가져와 점심.</div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-time">12:00 ~ 17:00</span>
+          <div class="tl-body">실내 활동 권장. 비비디·마블·캐릭터·실내 공연. <strong>모아나 풀장은 그늘 0 — 사진은 좋지만 사람 거의 없음</strong> (날탱양).</div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-time">18:00 ~ 21:00 ⭐</span>
+          <div class="tl-body"><strong>두 번째 슬라이드 골든타임.</strong> 시원하고 한산. 두 번째 정찬 시간 이용해 후다닥 타는 가족 다수.</div>
+        </div>
+      </div>
+
+      <div class="quote">
+        <div class="quote-text">조식 먹고 아침 9시, 9시 반 수영장 오픈할 때 바짝 한 시간 먼저 노는 거 추천입니다. 좀 그나마 덜 덥고 슬라이드 대기 없이 1시간 바짝 놀고 실내로 대피. 저녁 시간대 이용해서 놀이기구 타니까 시원하고 너무 좋았어요!</div>
+        <span class="quote-author">박재영 (3/19~23 항차)</span>
+      </div>
+
+      <h3 class="h2">📏 슬라이드 신장 제한 — 칼같음</h3>
+      <div class="box box-warn">
+        <span class="box-icon">⚠️ 키 48인치 미만 못 탐</span>
+        <ul>
+          <li><strong>48인치(약 122cm) 칼같이 적용</strong> — 만 6~7세도 못 타는 경우 多 (애나벨, naldo)</li>
+          <li>아이가 작으면 키 늘이는 신발/깔창 조작 X — 직원이 직접 측정</li>
+          <li>대안: <strong>웨이파인더베이(모아나풀)</strong>는 영유아도 들어감 (꼬다자매맘 영상으로 확인)</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">🩲 수영 관련 짐 팁</h3>
+      <ul class="bullet-list">
+        <li><strong>래시가드 강추</strong> — 햇빛 데미지 +수영장에 그늘 없음 (밤톨이22)</li>
+        <li><strong>구명조끼는 풀사이드에서 무료 대여</strong> — 사이즈별 비치</li>
+        <li><strong>수영복 빨래줄</strong>: 옷걸이 + 천장 에어컨 위로 걸면 1시간 만에 마름 (박재영, 미미랜드)</li>
+        <li>마지막날 짐 싸기 위해 보통 셋째날부터 수영 안 하는 사람도 있음 (밤톨이22)</li>
+        <li><strong>방에 빨래 비치된 줄이 있긴 한데 짧음</strong> → 보조 빨래줄 가져오면 유용</li>
+      </ul>
+
+      <h3 class="h2">💧 음료·식사 동선 (수영하면서)</h3>
+      <ul class="bullet-list">
+        <li>17층 풀데크 옆 — 피자플래넷, 오하나그릴, 셀프 탄산음수대</li>
+        <li>풀바(Pool Bar) — 칵테일·맥주 유료, 자동 18% 팁</li>
+        <li>일반 객실은 풀데크 의자 자유석 (이른 시간 자리 맡기)</li>
+        <li>컨시어지는 19층 선덱 카바나에서 풀데크 슬라이드 출입구 별도 (카할라)</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- ====================================================== -->
+  <!-- 08 포토패키지 검증                                      -->
+  <!-- ====================================================== -->
+  <div class="section-card" id="sec08">
+    <div class="sec-header collapsed">
+      <span class="sec-num">08</span>
+      <span class="sec-title">📸 포토패키지 살까 말까? — 실 구매자 후기</span>
+      <span class="sec-toggle">▾</span>
+    </div>
+    <div class="sec-body collapsed">
+      <div class="contributor-strip">
+        <strong>주요 출처</strong> · DCL expert(평균 600장), 애나벨(3/26 만족), naldo(3/26 만족), 밤톨이22(3/13), Sun(4/20 120장), 미미랜드(3/13 비추), 인어니모(4.16)
+      </div>
+
+      <h3 class="h2">📊 후기 분포</h3>
+      <div style="display:flex; gap:14px; margin-bottom:14px; flex-wrap:wrap;">
+        <div style="flex:1; min-width:200px; background:var(--green-bg); border:1px solid #a8d4b8; border-radius:8px; padding:14px;">
+          <div style="font-size:11px; font-weight:700; letter-spacing:0.1em; color:var(--green); margin-bottom:6px;">👍 추천 (다수)</div>
+          <div style="font-size:13px; line-height:1.6;">
+            "포토샵 한 사진도 재밌고 다른 사진도 잘 나옴" — 애나벨<br>
+            "120장 정도 됨, 패키지 추천" — Sun<br>
+            "약 180장 촬영" — 써니
+          </div>
+        </div>
+        <div style="flex:1; min-width:200px; background:var(--red-bg); border:1px solid #f5c6c6; border-radius:8px; padding:14px;">
+          <div style="font-size:11px; font-weight:700; letter-spacing:0.1em; color:var(--red); margin-bottom:6px;">👎 비추 (소수)</div>
+          <div style="font-size:13px; line-height:1.6;">
+            "엄청 캐릭터 일정 맞춰 쫓아다녀야 함" — 미미랜드<br>
+            "어른만 있는 그룹이라면 좀 고민할 듯" — 애나벨
+          </div>
+        </div>
+      </div>
+
+      <h3 class="h2">📍 포토패키지 핵심 스팟 (4박 기준 회수 가능 장소)</h3>
+      <ul class="bullet-list">
+        <li><strong>비비디 부티크 입구</strong> — 공주 의상 입은 직후</li>
+        <li><strong>마블 스튜디오 (비비디 맞은편 실내, 숨어있음)</strong> — 무기 들고 포즈, 포토샵 합성 재미 (밤톨이22 강추)</li>
+        <li><strong>스파이더맨 포토스팟</strong> — 줄이 꽤 있음</li>
+        <li><strong>아바타 영감 받은 포토</strong> — 앱 스케줄에 시간·장소 안내</li>
+        <li><strong>승선 시 입구</strong> — 가족샷 자동 촬영</li>
+        <li><strong>정찬 식당 안</strong> — 식사 중 사진사 돌아다님, 적극적으로 부르기 (밤톨이22)</li>
+        <li><strong>공연 끝나고 포토타임</strong> — 무대 앞쪽이면 최고</li>
+      </ul>
+
+      <div class="box box-tip">
+        <span class="box-icon">💡 포토패키지 적극 활용 팁</span>
+        <ul>
+          <li><strong>사진사 적극적으로 부르기</strong> — 패키지 샀으면 부담 없이 OK (밤톨이22)</li>
+          <li><strong>마블 스튜디오는 잘 안 보임</strong> — 비비디 맞은편 실내, 사진사 없음 → 직원에게 물어봐서 찾아가기</li>
+          <li><strong>스튜디오 포즈 가이드도 받을 수 있음</strong> — 무기 종류 다양</li>
+          <li>승선 입구 사진은 패키지 안 사도 옆에서 핸드폰으로도 가능 (밤톨이22)</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">📋 결정 매트릭스 — 살까 말까</h3>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>조건</th><th>추천</th><th>이유</th></tr></thead>
+          <tbody>
+            <tr><td>아이 + 비비디/마블 같이</td><td><span class="verdict verdict-yes">✓ 강추</span></td><td>분장한 사진을 프로 화질로</td></tr>
+            <tr><td>아이 多 + 적극적</td><td><span class="verdict verdict-yes">✓ 강추</span></td><td>4박 평균 120~600장 회수 가능</td></tr>
+            <tr><td>어른만 + 사진 안 좋아함</td><td><span class="verdict verdict-no">✗ 비추</span></td><td>본전 회수 어려움</td></tr>
+            <tr><td>아이 多 + 너무 무계획</td><td><span class="verdict verdict-mid">△ 보통</span></td><td>일정 챙기기 부담될 수 있음</td></tr>
+            <tr><td>승선 입구만 원함</td><td><span class="verdict verdict-no">✗ 비추</span></td><td>옆에서 핸드폰 촬영 가능</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="box box-warn">
+        <span class="box-icon">⚠️ 사전 결제 vs 현장 구매</span>
+        <ul>
+          <li>대부분 후기가 <strong>사전 결제 (Pre-cruise) 권장</strong> — 더 저렴함</li>
+          <li>현장에서 패키지 안 샀어도, 일부 사진은 개별 구매 가능 (가격 비쌈)</li>
+          <li>"unlimited photo" 신청한 사람들이 가장 만족도 높음 (naldo)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ====================================================== -->
+  <!-- 09 컨시어지 진짜 후기                                   -->
+  <!-- ====================================================== -->
+  <div class="section-card" id="sec09">
+    <div class="sec-header collapsed">
+      <span class="sec-num">09</span>
+      <span class="sec-title">🥂 컨시어지 18가지 진짜 후기 — 알콜러버라면 강추</span>
+      <span class="sec-toggle">▾</span>
+    </div>
+    <div class="sec-body collapsed">
+      <div class="contributor-strip">
+        <strong>핵심 출처</strong> · 카할라(3/26 컨시어지 인사이드, 18가지 디테일 후기), 크롱(3/19 컨시 인사이드)
+      </div>
+
+      <div class="box box-gold">
+        <span class="box-icon">💎 카할라의 한 줄 평</span>
+        <ul>
+          <li><strong>"알콜러버라면 컨시어지를 무조건 추천. 매일매일 뽀므리 2병 이상 해치움. 와인 마시면서 공연 보는 것도 아주 좋았음."</strong></li>
+          <li>초3 아이 기준 손이 많이 안 가는 나이라면 부모도 즐기고 아이도 즐기기 좋음</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">🔑 컨시어지 혜택 — 카할라의 18가지 디테일</h3>
+      <ol class="bullet-list" style="counter-reset: list; gap:8px;">
+        <li><strong>전용 체크인 라인</strong> + 우선 체크인 (라운지에 음료·휴식 공간)</li>
+        <li>승선 후 <strong>할리우드 스포츠클럽에서 점심</strong>. 첫날 웰컴드링크 주류 무제한 — 샴페인·와인 등 / 미네랄(아쿠아 판나)·스파클링(산펠레그리노) 바틀워터 주문 가능</li>
+        <li><strong>롤코 예약 오픈 시 컨시어지가 먼저 알려줌</strong> + 액티비티 예약 도움</li>
+        <li>매일 오전 라운지 캐릭터 그리팅 스케줄 받음 (3/26 기준: 미키·미니는 둘째날부터 매일, 알라딘·플루토·구피·도널드·데이지 봄)</li>
+        <li><strong>다른 식당 음식 라운지로 가져와도 OK, 라운지 음식 다른 곳으로 가져가도 OK</strong>. 해피아워 주류도 디너 식당·공연·방으로 가져가도 OK. 어지간한 건 전부 익스큐즈 분위기</li>
+        <li><strong>어벤져스 공연은 라운지에서 주류 받아 17층 난간에서</strong> 20분 전 도착하면 난간 앞자리 가능</li>
+        <li>수영 시 19층 선덱 카바나 11~12시 자리잡고 라운지·풀바·피자 가져와 점심. 19층에서 슬라이드 입구 따로(컨시어지 키 출입)</li>
+        <li><strong>18층 컨시어지 전용 스파</strong> — 무료 사우나(온탕·냉탕·건식·습식·샤워·락커). 규모 작음, 스위밍웨어 필수</li>
+        <li>18층 스파 통로로 컨시어지 키 없이 19층 선덱·라운지 출입 가능 (구경 가능)</li>
+        <li><strong>불꽃놀이는 컨시어지 별도 선덱</strong>에서 가능하지만 소리가 안 들림 → 17층 수영장 추천. 유료 자리도 비추</li>
+        <li>컨시어지룸 캐릭터 베딩 신청 가능 — 겨울왕국·카 테마만</li>
+        <li><strong>패밀리 컨시어지 베란다 룸은 출입문 2개</strong> — 도어 데코 2개 분량 준비 필요</li>
+        <li>라운지 음료: 제로 코크·다이어트 코크·제로 스프라이트·코크·스프라이트·환타·스파클링 에비앙·스파클링 산펠레그리노·미네랄 아쿠아 판나, 바샤 커피(드립 요청 가능), TWG 티</li>
+        <li><strong>주류 잘 모르면 뽀므리 샴페인 추천</strong></li>
+        <li>19층 선덱·17층 컨시 라운지·컨시 헬스장·사우나는 <strong>24시간 개방</strong>. 직원은 22시 퇴근(일반 헬스장은 22시 셧다운)</li>
+        <li>컨시어지 와이파이 혜택 — 24시간짜리 1개 바꿔가면서 한 사람만. 4인 이상이면 시간 끊김 없이 사용. 스트리밍 X, 메시지 OK</li>
+        <li><strong>라운지에 흡연 전용 자리</strong> 있음</li>
+        <li>공연 우선입장 40분 전부터. 50분 전 가면 앞쪽 3번째 가운데. 맨 앞 가운데 라인은 1시간 전</li>
+      </ol>
+
+      <h3 class="h2">💸 컨시어지 가치 판단 — 누구에게 추천?</h3>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>유형</th><th>추천도</th><th>이유</th></tr></thead>
+          <tbody>
+            <tr><td><strong>알콜러버 부부</strong></td><td><span class="verdict verdict-yes">✓ 강추</span></td><td>주류 무제한 + 라운지 음식 + 풀데크 → 본전 회수 명확</td></tr>
+            <tr><td><strong>손 안 가는 아이 (초등 이상)</strong></td><td><span class="verdict verdict-yes">✓ 강추</span></td><td>부모 즐기는 시간 확보</td></tr>
+            <tr><td><strong>영유아 부모</strong></td><td><span class="verdict verdict-mid">△ 보통</span></td><td>라운지 활용 시간 적음. 다른 옵션 고민</td></tr>
+            <tr><td><strong>술 안 마시는 그룹</strong></td><td><span class="verdict verdict-mid">△ 보통</span></td><td>가성비 떨어짐</td></tr>
+            <tr><td><strong>예약 전쟁 부담스러운 가족</strong></td><td><span class="verdict verdict-yes">✓ 추천</span></td><td>컨시어지가 롤코·액티비티 예약 도움</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="box box-tip">
+        <span class="box-icon">💡 컨시어지 알아두면 좋은 자잘한 것</span>
+        <ul>
+          <li>하선 당일 컨시어지 라운지 운영. 8시 반 나가라고 하는데 <strong>다들 버티는 분위기</strong>라 최대한 버티기 (카할라)</li>
+          <li>맥주(생맥/캔/병) 무료 가능 여부는 카할라가 확인 못 함 — 와인만 공략 (정보 추가 필요)</li>
+          <li>바틀로 주류 별도 구매는 <strong>병당 $100+</strong></li>
+          <li>컨시어지 라운지에서 직접 캐릭터 보기 가능 → 그리팅 예약은 <strong>로얄게더링만 잡고 나머지는 라운지 활용</strong> 전략 가능</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ====================================================== -->
+  <!-- 10 가져갈 vs 말 것                                       -->
+  <!-- ====================================================== -->
+  <div class="section-card" id="sec10">
+    <div class="sec-header collapsed">
+      <span class="sec-num">10</span>
+      <span class="sec-title">🧳 가져갈 것 vs 가져갈 필요 없는 것 — 실탑승자 검증</span>
+      <span class="sec-toggle">▾</span>
+    </div>
+    <div class="sec-body collapsed">
+      <div class="contributor-strip">
+        <strong>주요 출처</strong> · 다수 항차 후기 종합. 특히 인어니모(4.16 픽시 130개), Sun(4/20 짐 검사), 밍밍(4/16 28인치 핸드캐리 호통), 듀듀(4/13 굿럭 사용기), 엘로이(4.2 부스터)
+      </div>
+
+      <h3 class="h2">✅ 진짜 필요했던 것 (실탑승자 검증)</h3>
+      <div class="box box-green">
+        <span class="box-icon">⭐ 강력 추천 (다수 후기 일치)</span>
+        <ul>
+          <li><strong>개인 드라이기</strong> — 방 드라이기 매우 불만족. 머리 길고 양 많으면 필수 (애나벨, 듀듀)</li>
+          <li><strong>래시가드</strong> — 17층 햇빛 살인적 (밤톨이22)</li>
+          <li><strong>모자·자외선차단제</strong> — 풀데크·가든 공연용</li>
+          <li><strong>여행자 보험 가입증</strong> — 메디컬센터 비용 큼. 피검사 $500, CT $1,000 (소나기)</li>
+          <li><strong>여권·아이 출생증명서 영문본</strong> — 입국 시 아이 따로 심사 가능</li>
+          <li><strong>일반 빨대</strong> — 어린 아이 종이빨대 씹어서 접힘 (듀듀)</li>
+          <li><strong>김·김자반</strong> — 한식파 아이 식음 전폐 방지 (듀듀)</li>
+          <li><strong>큰 텀블러</strong> — 방 컵으론 작음 (엘로이 후회)</li>
+          <li><strong>핸드폰 우산(쿨링케이스)</strong> — 더위 먹어서 셧다운 사례 (날탱양)</li>
+          <li><strong>본인 멀미약</strong> — 의무실에도 있긴 하지만 본인 약이 안심</li>
+          <li><strong>옷걸이 보조 빨래줄 (수영 잦으면)</strong> — 1시간 내 마름 (박재영)</li>
+          <li><strong>성인약 (감기·소화제)</strong> — 메디컬 약 비쌈, $9~ (naldo)</li>
+          <li><strong>사인북 + 펜</strong> — 캐릭터 자연 출몰 시 적극 반응</li>
+          <li><strong>케이블 정리·멀티탭 대신 USB 어댑터 여러 개</strong> — 멀티탭 반입 금지</li>
+          <li><strong>아이 신발 백구두 (비비부 시 필요)</strong> — 의상에 신발 미포함 (밍밍)</li>
+          <li><strong>아이 코스튬</strong> — 캐릭터들이 더 적극적으로 반응 (듀듀)</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">❌ 진짜 필요 없었던 것</h3>
+      <div class="box box-warn">
+        <span class="box-icon">⚠️ 짐 무게만 차지함</span>
+        <ul>
+          <li><strong>다이슨 고출력 드라이기</strong> — 반입 불가 (리틀새론)</li>
+          <li><strong>고데기 (고출력)</strong> — 헤어 전열기구는 가능하나 고출력 X</li>
+          <li><strong>멀티탭 / 콘센트 분배기</strong> — 반입 금지 (밤톨이22)</li>
+          <li><strong>컵라면</strong> — 식음료 풍부해서 못 먹고 청소 크루에게 주는 케이스 (김남순)</li>
+          <li><strong>너무 많은 픽시더스트</strong> — 130개 이상은 과함. <strong>80~100개 적정</strong></li>
+          <li><strong>탑승 전 더피 카메라</strong> — 배 안 샵에 없음 (Sun) → 마지막 날 가도 좋음</li>
+          <li><strong>아이 텀블러 (배에 종이컵 충분)</strong> — 단 어른 텀블러는 추천</li>
+          <li><strong>큰 비닐 / 압축팩</strong> — 의외로 짐 줄여줘서 OK지만 픽시 받느라 결국 안 줄어듦</li>
+          <li><strong>핸드폰 충전기 여러 개</strong> — 1~2개로도 충분 (와이파이 안 쓰면 배터리 천천히 닳음)</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">🚫 절대 금지 / 항구 보안 검색에서 압수</h3>
+      <div class="box box-warn">
+        <span class="box-icon">🚫 반입 금지 / 압수 사례</span>
+        <ul>
+          <li><strong>다이슨 고출력 드라이기</strong>, <strong>고출력 고데기</strong></li>
+          <li><strong>멀티탭</strong> (USB 충전 어댑터는 OK)</li>
+          <li><strong>전기 인덕션·헤어롤 (전열기구 일부)</strong></li>
+          <li><strong>초코우유·아동 음료</strong>가 압수된 사례 (날탱양) — 우유 분류로 보이는 듯</li>
+          <li><strong>흉기·라이터·발화 가능한 물품</strong></li>
+          <li>면세 와인·샴페인은 1인 1병 정도 핸드캐리 OK (실제 후기로 검증)</li>
+          <li>코스트코 무아스 드라이기는 통과 (Sun)</li>
+          <li>맥주 6캔(320ml) 핸드캐리 통과 사례 있음 (Sun)</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">🧳 캐리어 사이즈 / 짐 운반 팁</h3>
+      <div class="quote">
+        <div class="quote-text">28인치 캐리어를 핸드캐리 했는데 (수하물 제한 32kg 꽉꽉 채움) 터미널 도착하자마자 수하물 맡기는 곳에서 젊은 남자 직원이 호통을 쳤습니다… 옆 줄에 28인치 핸드캐리 하는 사람이 마침 엄청 많이 지나가서 ㅋㅋ 무사히 가져와서 다행이었습니다.</div>
+        <span class="quote-author">밍밍 (4/16 항차)</span>
+      </div>
+      <ul class="bullet-list">
+        <li><strong>28인치 캐리어 핸드캐리는 가능하지만 호통 받을 수 있음</strong> — 캐빈 사이즈 권장</li>
+        <li><strong>위탁 짐은 빨리 도착</strong> — 13:35쯤 캐리어 방 앞에 도착 (naldo)</li>
+        <li>마지막 날 짐은 <strong>전날 밤 10시까지</strong> 객실 앞에 내놔야 함 (밤톨이22)</li>
+        <li><strong>본인이 끌고 하선하면 더 일찍 가능</strong> (Express Walk-Out)</li>
+        <li>현지 짐 보관: <strong>굿럭(GoodLuck)</strong> 등 짐 배송 서비스 가능 (듀듀의 디테일 후기)</li>
+      </ul>
+
+      <h3 class="h2">🚌 셔틀·교통 — 부스터 카시트 주의</h3>
+      <div class="box box-warn">
+        <span class="box-icon">⚠️ 부스터 카시트 필수 (택시 외)</span>
+        <ul>
+          <li><strong>택시가 아닌 차량(렌트·앱 택시 등)은 부스터 카시트 신청 필수</strong> — 안 챙기면 경찰 보일 때 숨으라고 안내받음 (엘로이)</li>
+          <li>택시는 부스터 없어도 OK</li>
+          <li>그랩 vs 미리 예약: 비슷한 비용. 미리 예약(벤·부스터·기사 마중) 시 공항~호텔 10만원 정도 (엘로이)</li>
+        </ul>
+      </div>
+
+      <h3 class="h2">📦 픽시더스트 (Fish Extender) — 4박 가이드</h3>
+      <ul class="bullet-list">
+        <li><strong>적정 수량: 가족당 80~130개</strong> (인어니모 130개, Sun 100개 받은 만큼 다 받음)</li>
+        <li><strong>첫날 많이 뿌리면 후반 좋은 거 와도 보답 못함</strong> (naldo) → 1일차 30%, 2-3일차 50%, 마지막날 20% 배분</li>
+        <li>도둑 있긴 함 — 한두 개 못 받아도 괜찮다 마인드 (Sun)</li>
+        <li><strong>피쉬 익스텐더(주머니)는 따로 가져가야 함</strong> — 안 가져가면 받기 어려움</li>
+        <li>WhatsApp 단톡에서 적정 수량·디자인 정보 공유 활발</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ====================================================== -->
+  <!-- 11 와이파이 · 통신                                       -->
+  <!-- ====================================================== -->
+  <div class="section-card" id="sec11">
+    <div class="sec-header collapsed">
+      <span class="sec-num">11</span>
+      <span class="sec-title">📱 와이파이·통신 — 무료 시간대 끝까지 쥐어짜는 법</span>
+      <span class="sec-toggle">▾</span>
+    </div>
+    <div class="sec-body collapsed">
+
+      <div class="contributor-strip">
+        <strong>출처</strong> · 리틀새론(3월말) · naldo(3/26) · 마지파(4월) · 미국가족(5월초) · 다수 항차
+      </div>
+
+      <div class="quote">
+        <div class="quote-text">"인터넷 기준 팁<br>
+        1. 첫날 배 와이파이로 <strong>오후 4:30 정도까지 무료</strong>, 이후 배 떠나면 유료만 가능<br>
+        2. 마지막날 도착하면 <strong>아침 7:00 정도부터 다시 무료</strong> 사용 가능<br>
+        3. 와이파이 구매 안 해도 <strong>iMessage 무료</strong>(단, 상대도 아이폰)<br>
+        4. 와이파이 구매 안 해도 카톡 알림 미리보기는 OK"</div>
+        <div class="quote-author">— 리틀새론 (3월말 항차, 가장 정확한 시간대 정리)</div>
+      </div>
+
+      <div class="box-tip">
+        <div class="box-title">💡 후기 100명 종합 — 와이파이 살까 말까</div>
+        <div style="font-size:13.5px; line-height:1.7;">
+          <strong style="color:var(--green);">❶ 한 명만 사면 충분</strong> — "한국에서 응급전화 올까봐 한 대만 신청" 다수<br>
+          <strong style="color:var(--green);">❷ 영어 못하면 사야 함</strong> — "여기서 정보 얻으실 분은 와이파이 무조건" (다수)<br>
+          <strong style="color:var(--gold);">❸ 안 사도 OK 케이스</strong> — 가족끼리만 즐길 거면 4박 동안 진짜 인터넷 할 시간 없음<br>
+          <strong style="color:var(--red);">❹ 디즈니 앱은 배터리 흡혈귀</strong> — "디즈니 내부 앱 쓰면 외부 와이파이 안 써도 배터리 빨리 닳아요" (마지파)
+        </div>
+      </div>
+
+      <div class="h2">⏰ 항구 도착 시각별 와이파이 활용 시뮬레이션</div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">~11:00 항구 도착</div>
+          <div class="tl-desc">짐 맡기고 보안 검색. <strong>와이파이는 아직 안 됨</strong> — 항구는 무료 wifi 없음.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">11:30 배 와이파이 첫 잡힘</div>
+          <div class="tl-desc"><strong>📍 가장 결정적 순간</strong> — 잡히는 즉시 디즈니 앱 → <span class="tag tag-gold">로얄게더링 예약</span>부터. 10분만 늦어도 마감.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">11:30~13:00 무료 골든타임</div>
+          <div class="tl-desc">캐릭터 그리팅, 정찬 예약, 비비디 잔여석 확인 모두 이 시간 안에. <strong>로얄게더링 → 베이맥스/미키/미니 → 어셈블 → 비비디</strong> 순.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">16:30 배 출항</div>
+          <div class="tl-desc">싱가포르 통신 끊김. 와이파이 안 산 사람은 이때부터 디지털 디톡스 시작 ✋</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">마지막날 새벽 4~5시</div>
+          <div class="tl-desc">싱가포르 인근 진입. 데이터/통신 다시 잡히기 시작 (이심·로밍).</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">마지막날 아침 7:00~</div>
+          <div class="tl-desc"><strong>배 와이파이 다시 무료</strong>. 그랩 호출, 호텔 셔틀 확인은 여기서.</div>
+        </div>
+      </div>
+
+      <div class="box-warn">
+        <div class="box-title">⚠️ 와이파이 끊김 타이밍 항차마다 다름</div>
+        <ul class="bullet-list">
+          <li>"배 타고 <strong>5~6시쯤 끊김</strong>. 7시쯤 24시간 무료 와이파이 연결" (어떤 항차)</li>
+          <li>"<strong>아예 안 터지는 시간대도 있음</strong>" (말레이시아 넘어 동쪽으로 갔다가 돌아오는 항로)</li>
+          <li>핵심: <strong>출항 직전 마지막 카톡은 미리 보내두기</strong></li>
+        </ul>
+      </div>
+
+      <div class="h2">📶 와이파이 안 사도 되는 4가지 꿀팁</div>
+      <ul class="bullet-list">
+        <li><strong>iMessage</strong> — 와이파이 안 사도 OK. 상대도 아이폰이면 무료.</li>
+        <li><strong>알림 미리보기</strong> — 카톡·문자 알림은 와이파이 없이도 받아짐 (답장은 안 됨).</li>
+        <li><strong>선내 메신저</strong> — 디즈니 앱 내 채팅. 가족·일행끼리 위치 공유, 약속 잡기 OK.</li>
+        <li><strong>예약 시 와이파이만 잠깐 켜기</strong> — "긱스카이 사용할 때 와이파이 끄고, 앱으로 예약할 때만 무료 와이파이 켜서 한국 통신비 절약, 예약은 잘됨" (어떤 항차)</li>
+      </ul>
+
+      <div class="box-tip">
+        <div class="box-title">💡 디즈니 앱 배터리 절약법</div>
+        <div style="font-size:13.5px;">
+          앱 설정 → <strong>Connect Wi-Fi → Disconnect</strong>. 외부 와이파이 끊고 내부망만 쓰면 배터리 덜 닳음.<br>
+          (앱 사용 자체는 내부망으로 무료 가능)
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ====================================================== -->
+  <!-- 12 진짜 얼마 썼나                                         -->
+  <!-- ====================================================== -->
+  <div class="section-card" id="sec12">
+    <div class="sec-header collapsed">
+      <span class="sec-num">12</span>
+      <span class="sec-title">💰 진짜 얼마 썼나 — 실 탑승자 영수증 공개</span>
+      <span class="sec-toggle">▾</span>
+    </div>
+    <div class="sec-body collapsed">
+
+      <div class="contributor-strip">
+        <strong>출처</strong> · naldo(3/26) · 레나네&민들레(4/29) · 카할라(컨시) · 다수 항차 비용 후기 종합
+      </div>
+
+      <div class="box-warn">
+        <div class="box-title">⚠️ 가장 충격적인 사실 — "마이 차지" 보고 다들 놀람</div>
+        <div class="quote" style="margin:8px 0 0 0;">
+          <div class="quote-text">"앱 들어가면 '마이 차지' 있거든요. 내가 배에서 얼마 썼나 알 수 있는… 얘네가 걸어둔 신용카드로 도망갈까봐 그런지 <strong>중간중간 일정 금액 넘으면 미리 결제</strong>를 해요. 저는 계속 '이미 결제하고 남은 금액'만 보고 얼마 안 썼네 하다가 <strong>토탈 보고 놀라버림</strong> ㅋㅋ"</div>
+          <div class="quote-author">— 익명 (4월 항차)</div>
+        </div>
+      </div>
+
+      <div class="h2">💵 실제 영수증 사례 — 4박 5일 추가 지출</div>
+
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr><th style="width:38%">항목</th><th style="width:22%">금액(USD)</th><th>비고</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>포토패키지</strong></td><td>$200대</td><td>사전 결제 가격 (선상 구매 시 더 비쌈)</td></tr>
+            <tr><td>팝콘</td><td>$5</td><td>1회</td></tr>
+            <tr><td>런더리(세탁)</td><td>$6.5</td><td>가족 단위 1회</td></tr>
+            <tr><td>기념품 샵</td><td>$40</td><td>소소한 픽시·키링류</td></tr>
+            <tr><td>TWG 쇼핑</td><td>변동</td><td>면세보다 선상이 저렴하다는 의견 다수</td></tr>
+            <tr><td>키즈클럽 밴드</td><td>$0</td><td>$25 디파짓 → 반납 시 환불</td></tr>
+            <tr><td>버블티</td><td>$30</td><td>가족 단위</td></tr>
+            <tr><td><strong>인터넷</strong></td><td>$0</td><td>"아예 안 썼음" (영어 OK + 가족 동반)</td></tr>
+            <tr><td><strong>팁(그래튜어티)</strong></td><td>사전결제</td><td>3일째에 청구 — 사전 안 한 사람들 당황</td></tr>
+            <tr style="background: var(--gold-bg);"><td><strong>합계 (인터넷·팁 제외)</strong></td><td><strong>$280~330</strong></td><td>4인 가족 기준</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="font-size:12px; color:var(--text-muted); margin-top:6px;">출처: naldo(3/26 항차) 실제 후기 — 본인 항차 기준 영수증</div>
+
+      <div class="h2">🎁 큰 지출 — 살까 말까 고민템</div>
+
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr><th>아이템</th><th>가격</th><th>후기·만족도</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>비비디 풀패키지</strong></td>
+              <td>$180~$280</td>
+              <td>
+                <span class="verdict verdict-yes">강추</span>
+                "180달러 안 아깝다고 남편하고 얘기. 애가 너무 좋아하고 옷을 닳도록 입어서. 어딜 가든 대접해줌"
+              </td>
+            </tr>
+            <tr>
+              <td><strong>장식품 캐릭터템</strong></td>
+              <td>$69.9</td>
+              <td>
+                <span class="verdict verdict-mid">애가 우기면</span>
+                "애가 꼭 사야겠대서… 그냥 장식품 ㅋㅋ 69.9달러짜리"
+              </td>
+            </tr>
+            <tr>
+              <td><strong>런드리백</strong></td>
+              <td>$15</td>
+              <td>
+                <span class="verdict verdict-no">비추</span>
+                "이쁘긴 한데 차지 붙음. 굳이 런드리백까지… 안 샀음"
+              </td>
+            </tr>
+            <tr>
+              <td><strong>핀(뱃지)</strong></td>
+              <td>$0</td>
+              <td>
+                <span class="verdict verdict-yes">무료</span>
+                "게스트 서비스 가면 핀 공짜로 줌. <strong>마지막날엔 다 나가서 못 받음</strong> — 일찍 가야"
+              </td>
+            </tr>
+            <tr>
+              <td><strong>알라카르트 메뉴</strong></td>
+              <td>예약금 차감</td>
+              <td>"이미 내신 예약금액 제외하고 결제됨" — 추가 부담 적음</td>
+            </tr>
+            <tr>
+              <td><strong>병맥주(컨시 외)</strong></td>
+              <td>$60대(6병)</td>
+              <td>"칼스버그, 1664, 스텔라, 중국맥주, 타이거 등 6병 믹스 가능. 다른 거 대비 안 비쌈"</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="box-tip">
+        <div class="box-title">💡 빙고 — 진짜 한 명은 당첨됨</div>
+        <div style="font-size:13.5px; line-height:1.7;">
+          <strong>$2,500 빙고 당첨자 실제 출현</strong> (4월 항차, 단톡방에서 화제) — "남편 샴페인, 꼬냑, 위스키 테이스팅 + 빙고 게임 상금"이 하이라이트였다는 후기.<br>
+          <strong>$10,000 메가빙고</strong>도 도전 가능. 인당 참가비 $30~50 수준이지만, 한 항차에 한두 팀 당첨 사례.<br>
+          단, 미성년자끼리만 빙고장 입장 불가 — <strong>선내 모든 결제는 성인만 가능</strong>.
+        </div>
+      </div>
+
+      <div class="h2">💳 결제 시스템 — 신용카드 vs 현금 디파짓</div>
+      <ul class="bullet-list">
+        <li><strong>기본은 신용카드 등록</strong> — 룸키에 자동 차지. 방키만으로 다 결제됨.</li>
+        <li><strong>현금 디파짓 옵션</strong> — "첫날부터 게스트서비스 가서 연결 카드 삭제 → 방키로 $200까지만 쓰고 막힘. 디파짓 더 넣어두고 쓰고 <strong>마지막날 정산해서 차액 환불</strong>" (어떤 항차)</li>
+        <li><strong>아이만 카드 차감 안 됨</strong> — 빙고·게임·결제 모두 성인 카드로만</li>
+        <li><strong>멤버십 할인 물어봄</strong> — "너 가입한 멤버십 있니?" (D23 등) — 일부 직원만 물어봄, 안 물어보는 직원도 있음</li>
+      </ul>
+
+      <div class="box-warn">
+        <div class="box-title">⚠️ 팁(그래튜어티) — 사전결제 안 하면 3일째 청구</div>
+        <ul class="bullet-list">
+          <li>사전결제 안 한 사람들 다수가 "3일째 청구되어서 깜놀"</li>
+          <li><strong>미리 결제가 정신건강에 좋음</strong> — 마지막 정산 시 충격 ↓</li>
+          <li>하우스키핑/룸서비스 추가 팁은 별도 — "방에 메모+달러 놔두면 담당자랑 친구됨 ㅋㅋ" (5월 후기)</li>
+          <li>룸서비스 영수증에 팁 적으면 룸차지, 현금으로 줘도 OK</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ====================================================== -->
+  <!-- 13 돌발 상황                                              -->
+  <!-- ====================================================== -->
+  <div class="section-card" id="sec13">
+    <div class="sec-header collapsed">
+      <span class="sec-num">13</span>
+      <span class="sec-title">🚨 돌발 상황 대처 — 메디컬·도난·분실·갈등</span>
+      <span class="sec-toggle">▾</span>
+    </div>
+    <div class="sec-body collapsed">
+
+      <div class="contributor-strip">
+        <strong>출처</strong> · 소나기(메디컬 실사용) · 다수 도난 피해자 · 직원 갈등 목격자 · 응급실 후기
+      </div>
+
+      <div class="box-warn" style="border-color:var(--red); background:var(--red-bg);">
+        <div class="box-title" style="color:var(--red);">🏥 장염·복통·구토 → 무조건 메디컬센터 (선내)</div>
+        <div class="quote" style="margin:8px 0 0 0;">
+          <div class="quote-text">"앞으로 어드벤처 타시는 분들중에 절대 그럴 일 있으면 안 되겠지만 <strong>토하거나 설사하거나 장염 관련 증상 있으면 바로 메디컬센터로 가세요. 장염 관련 치료비·약 무료입니다.</strong> 대신 <strong>24시간 격리</strong>해야 해요. 절대 방 밖으로 못 나가요."</div>
+          <div class="quote-author">— 익명 (4월 항차 실 사용자)</div>
+        </div>
+      </div>
+
+      <div class="box-warn">
+        <div class="box-title">💸 하선 후 싱가포르 병원비는 살벌</div>
+        <div style="font-size:13.5px;">
+          <strong>오전 분점 클리닉:</strong> 진료+약 → <span style="color:var(--red); font-weight:700;">₩150,000</span> (가벼운 진료)<br>
+          <strong>응급실:</strong> "<span style="color:var(--red); font-weight:700;">₩1,000,000 넘게 나옴</span>. 싱가포르 병원비 무섭네요" (어떤 항차)<br>
+          → <strong>여행자보험 필수</strong>, 가족이 아프면 일찍 병원행, 영수증·진단서 챙기기
+        </div>
+      </div>
+
+      <div class="h2">🚫 도난·분실 사례 — 실제 발생함</div>
+
+      <div class="quote">
+        <div class="quote-text">"저 피쉬 하나 도난당했어요. 방으로 돌아가는데 <strong>아이들 세 명이 가방 들고 다니면서 방마다 뭔가를 나눠주는 줄 알았는데 가지고 가고 있던 거</strong>였어요…. 제 방에서도 뭔가 꺼내길래 방번호를 착각했나 싶어서 그냥 냅뒀는데 훔쳐간 거였어요"</div>
+        <div class="quote-author">— 익명 (피쉬 익스텐더 도난 피해)</div>
+      </div>
+
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr><th>상황</th><th>예방·대처</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>피쉬 익스텐더 도난</strong></td>
+              <td>아끼는 픽시는 안쪽 깊숙히 / 도둑 의심 시 사진 찍어두기 / 한두 개 잃어도 괜찮다 마인드</td>
+            </tr>
+            <tr>
+              <td><strong>방문 앞 자석·장식 분실</strong></td>
+              <td>"자석을 누가 가져가고 가방을 미키 귀에 걸어놨더라" — 비싼 자석은 떼서 보관</td>
+            </tr>
+            <tr>
+              <td><strong>핸드폰·소지품</strong></td>
+              <td>롤코·풀 입구 락커: <strong>자물쇠 없는 그냥 수납장</strong> — 신나서 다들 안 가져감, 분실 위험 낮으나 본인 책임</td>
+            </tr>
+            <tr>
+              <td><strong>공항·인천 짐 지연</strong></td>
+              <td>"30~40분 안 나옴. 분실물 가서 확인" — 경유편은 특히 자주 발생</td>
+            </tr>
+            <tr>
+              <td><strong>기념품 품절</strong></td>
+              <td>"이전 항차부터 품절" — 사고 싶은 거 첫날 점찍기, 단톡방 활용</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="h2">⚡ 직원 트레이닝 편차 — 항차마다 복불복</div>
+
+      <div class="quote">
+        <div class="quote-text">"직원들 경험 부족과 트레이닝이 덜 된 그런 문제는 엄청 많고요. 저희는 식당 담당 서버가 자기 소개 안 하고 저희 애기 이름도 끝까지 모르고 빵 먹을 때마다 버터 요청했는데 <strong>마지막날까지도 요청해야 주더라고요</strong>;; 들었던 것과 너무 달랐어요. 아르헨티나 출신이라서 영어 발음도 힘들고. <strong>근데 다른 배에서 넘어온 직원은 첫날부터 이름 다 외워</strong>줬어요."</div>
+        <div class="quote-author">— 익명 (4월 항차)</div>
+      </div>
+
+      <div class="box-tip">
+        <div class="box-title">💡 대처법</div>
+        <ul class="bullet-list">
+          <li><strong>식당 서버는 4박 내내 동일</strong> — 첫날 별로면 게스트 서비스에 변경 요청 가능</li>
+          <li><strong>객실 담당 호스트는 첫날 인사</strong> — 이때 이름 + 특별요청(베드레일, 베개 추가, 와인잔 등) 한 번에</li>
+          <li><strong>"베드레일 요청했는데 안 됨" 사례</strong> — "3일째에 생각나서 다시 요청하니 (다 나갔는지) 없다고 함! 소파베드에서 4박 내내 재웠어요" → <strong>첫날 안 되어 있으면 바로 다시 요청</strong></li>
+        </ul>
+      </div>
+
+      <div class="h2">🌧 날씨·번개 — 수영장 폐쇄 실제 발생</div>
+      <ul class="bullet-list">
+        <li><strong>번개 예보 시 수영장 차단</strong> — 마리나베이샌즈 수영장 사례, 선내도 동일 가능성</li>
+        <li>"예보 비 였는데 비 안 오는 데로 잘 운전하셨는지 마지막날 밤에만 비 살짝" — 캡틴이 우회 운항하기도</li>
+        <li><strong>5월 후기:</strong> "초여름 느낌, 한낮이면 덥긴 한데 한국이 더 더운…" — 4~5월이 의외로 견딜만</li>
+      </ul>
+
+      <div class="box-warn">
+        <div class="box-title">⚠️ 승객 간 갈등 — 실제 발생, 가드 늦게 옴</div>
+        <div style="font-size:13.5px; line-height:1.7;">
+          어떤 항차에 음주 후 폭언·시비 사례가 있었음. 흑인 커플이 "I don't feel safe around here" 항의했으나 <strong>크루(승무원)들이 당황해서 매니저 → 더 윗 매니저 호출하느라 시간 지체</strong>. 가드가 강하게 끌어내는 그림은 없었다는 후기.<br>
+          <strong>→ 갈등 상황 발생 시 즉시 게스트 서비스 또는 객실 호스트에게 알림. 동영상·증거 확보.</strong>
+        </div>
+      </div>
+
+      <div class="h2">🛂 항구 보안검색 — 의외로 빡셈</div>
+      <ul class="bullet-list">
+        <li><strong>초코우유 압수</strong> — "캐리어 검사할 때 초코우유 뺏겼어요 ㅠㅠ 우유라서 그른가봐요" (의외의 사례)</li>
+        <li><strong>립스틱 분해 요구</strong> — "꽤 세밀하게 해요. 제 거 립스틱 전담인 줄 알고 꺼내 보게 했어요"</li>
+        <li><strong>아이는 별도 출입국 심사</strong> — 성인 1 + 아이 1 한 팀 권장. 아이 생일·이름 철자 물어봄. 배 타고 내릴 때까지 <strong>최소 3회</strong></li>
+        <li><strong>면세 술은 직접 들고 타기</strong> — 캐리어 X (압수 가능)</li>
+      </ul>
+
+    </div>
+  </div>
+
+  <!-- ====================================================== -->
+  <!-- 14 하선 & 직후                                            -->
+  <!-- ====================================================== -->
+  <div class="section-card" id="sec14">
+    <div class="sec-header collapsed">
+      <span class="sec-num">14</span>
+      <span class="sec-title">🏁 하선 & 직후 — 8:10 방 나오기, 짐, 셔틀</span>
+      <span class="sec-toggle">▾</span>
+    </div>
+    <div class="sec-body collapsed">
+
+      <div class="contributor-strip">
+        <strong>출처</strong> · 듀듀(굿럭 짐 보관) · 5월 후기 다수(하선 동선) · 컨시 라운지 후기 · 셔틀 사용자
+      </div>
+
+      <div class="h2">⏱ 하선 당일 표준 타임라인</div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">새벽 4~5시</div>
+          <div class="tl-desc">싱가포르 항구 도착. 통신 다시 잡힘. <strong>롤코 미체험자는 이때라도 마지막 시도</strong>.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">5:30~6:10</div>
+          <div class="tl-desc">디너 1부(5:30) 그룹 조식 시작. <strong>7시쯤 일찍 하선하는 팀</strong>도 있음.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">7:00</div>
+          <div class="tl-desc">배 와이파이 다시 무료. 그랩·셔틀 확인 가능.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">7:00~7:30</div>
+          <div class="tl-desc"><strong>핀 받으러 게스트 서비스 GO</strong> — 늦으면 동남. "마지막날 챙기니 몇 개는 없네요 ㅋㅋ"</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">8:10</div>
+          <div class="tl-desc"><strong>방에서 나오는 데드라인</strong>. 서버가 전날 안내. 짐은 두고 나옴.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">8:10~8:30</div>
+          <div class="tl-desc">하선. <strong>컨시는 라운지 8:30까지 사용</strong> 가능 ("다들 버티는 분위기").</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">8:30~9:00</div>
+          <div class="tl-desc">짐 찾음. <strong>택 컬러로 분류되어 줄지어 나열</strong>되어 있음. 본인 짐 가리키면 가져감.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">9:00~9:30</div>
+          <div class="tl-desc">싱가포르 입국 재심사 (QR 재작성). <strong>5분 도보로 MRT역</strong> 도착 / 그랩·택시 줄 길음.</div>
+        </div>
+      </div>
+
+      <div class="box-tip">
+        <div class="box-title">💡 가장 자주 묻는 — 입국신고서 작성법</div>
+        <div class="quote" style="margin:8px 0 0 0;">
+          <div class="quote-text">"하선 시 입국신고서에 <strong>마지막 도시·마지막 포트 쓰는 거 → others / others / others</strong>를 찾아서 쓰래요. 게스트서비스랑 통화해서 겨우 알아냈어요 ㅜ 이거 모두 아는 것인가 ㅜㅜ"</div>
+          <div class="quote-author">— 익명 (4월 항차) — <strong>이제는 다 압시다</strong></div>
+        </div>
+      </div>
+
+      <div class="h2">🚖 항구 → 다음 목적지 — 옵션별 비교</div>
+
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr><th>옵션</th><th>가격</th><th>장단점</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>MRT</strong><br><span class="tag tag-blue">5분 도보</span></td>
+              <td>S$2~3</td>
+              <td>✅ 압도적 저렴 / ❌ 캐리어 많으면 빡셈, 환승 필요</td>
+            </tr>
+            <tr>
+              <td><strong>그랩 (일반)</strong></td>
+              <td>S$8~12</td>
+              <td>✅ 편함, 짐 적당이면 OK / ❌ <strong>줄 매우 길음</strong>, 부스터 없음</td>
+            </tr>
+            <tr>
+              <td><strong>그랩 (6인승/패밀리)</strong></td>
+              <td>S$20~30</td>
+              <td>✅ 캐리어 많을 때 / ❌ 짐 많으면 3명 한도, 부스터 별도</td>
+            </tr>
+            <tr>
+              <td><strong>모지오 (예약 차량)</strong></td>
+              <td>~₩100,000(공항)</td>
+              <td>✅ 부스터/마중 선택, 가격 확정 / ❌ 그랩보단 비쌈</td>
+            </tr>
+            <tr>
+              <td><strong>디즈니 셔틀 (호텔)</strong></td>
+              <td>$23/인</td>
+              <td>샹그릴라 등 일부 호텔만 / 만 3세 미만 무료 / 짐 많을 때 의외로 편함</td>
+            </tr>
+            <tr>
+              <td><strong>크루즈 짐 샌딩(호텔行)</strong></td>
+              <td>$12/개</td>
+              <td>크기·무게 무관 — 유니버셜 등 바로 갈 때 강추</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="quote">
+        <div class="quote-text">"저희는 9시반쯤 하선. 내려서 짐 찾자마자 <strong>호텔로 부치고 그랩 잡아서 유니버셜로 직행</strong> 시간 딱 맞았어요! <strong>그랩·택시 줄이 엄청 길어요</strong> 😂"</div>
+        <div class="quote-author">— 익명 (4월 항차) — 가장 효율적 동선</div>
+      </div>
+
+      <div class="h2">📦 굿럭 짐 보관소 — 듀듀의 실 사용기</div>
+      <div class="box-tip">
+        <div class="box-title">💡 굿럭(GoodLuck) 짐 보관 — 새벽 도착자 필수</div>
+        <ul class="bullet-list">
+          <li><strong>위치:</strong> 항구 나오자마자 오른쪽으로 쭉. MRT 셔틀 탑승장 맞은편 → <strong>못 찾을 수가 없음</strong></li>
+          <li><strong>예약:</strong> 이틀 전 완료했으나 현장에서 영문 예약 확인 안 됨 → <strong>굿럭 앱 다운로드 후 영문 변환 기능 활용</strong></li>
+          <li><strong>대안:</strong> 유니버셜 락커 $35/캐리어 사이즈 (참고용)</li>
+        </ul>
+      </div>
+
+      <div class="h2">📸 포토패키지 — 하선 후 다운로드 기한</div>
+      <ul class="bullet-list">
+        <li><strong>50일까지 다운로드 가능</strong> — 게스트 서비스 확인</li>
+        <li><strong>같은 방이면 가족 모두 다운로드 가능</strong> — 한 명 ID로 사도 OK</li>
+        <li><strong>하선 직전까지 추가 촬영 OK</strong> — "지금도 찍을 수 있다면서 선수·선미 가보라고 하셨었음"</li>
+        <li><strong>마지막날 짐 검사 전</strong> 포토월 패스 가능 — "그닥 안 이쁘니 직진 OK"</li>
+      </ul>
+
+      <div class="box-warn">
+        <div class="box-title">⚠️ 육지 멀미 — 의외로 흔함</div>
+        <ul class="bullet-list">
+          <li>"하선하고 계속 어질어질" 다수 후기</li>
+          <li>"마리나베이샌즈 와서 놀고 있는데 계속 땅이 올라갔다 내려갔다 하네요"</li>
+          <li>→ 하선 당일 격한 액티비티 자제, 충분히 물 마시기</li>
+        </ul>
+      </div>
+
+      <div class="h2">✈️ 직후 일정 — 추천 동선</div>
+      <ul class="bullet-list">
+        <li><strong>저녁/밤 비행기:</strong> D'리조트 다운타운 이스트 워터파크 (인당 $25, 클룩이 더 저렴) / 카프리 데이유즈 호텔 (낮잠 가능)</li>
+        <li><strong>유니버셜 직행:</strong> 짐 호텔 부치고 그랩 → 4박 디크 후라 익스프레스 있으면 3~4시간 OK</li>
+        <li><strong>창이공항:</strong> T3 → 쥬얼창이 도보 5~10분(가장 편함) / 야쿤 카야토스트는 보딩게이트 쪽에도 있음</li>
+        <li><strong>면세 마지막 쇼핑:</strong> TWG 티는 <strong>크루즈에서 사는 게 가장 쌈</strong> (면세·시내 없음/비쌈)</li>
+      </ul>
+
+    </div>
+  </div>
+
+  <!-- ====================================================== -->
+  <!-- 15 총평 & 한마디                                          -->
+  <!-- ====================================================== -->
+  <div class="section-card" id="sec15">
+    <div class="sec-header collapsed">
+      <span class="sec-num">15</span>
+      <span class="sec-title">💎 총평 & 다음 탑승자에게 — 100명의 한마디</span>
+      <span class="sec-toggle">▾</span>
+    </div>
+    <div class="sec-body collapsed">
+
+      <div class="contributor-strip">
+        <strong>출처</strong> · 3~5월 항차 후기 작성자 다수(약 30명의 종합 후기 메시지 추출)
+      </div>
+
+      <div class="h2">⭐ 만족도 분포 — 후기 100건 종합</div>
+      <div class="rating-bar">
+        <div class="rating-row">
+          <span class="rating-label">"가성비 떨어진다" (객실·디즈니 매니아X)</span>
+          <div class="rating-track"><div class="rating-fill" style="width:20%; background:var(--red);"></div></div>
+          <span class="rating-val">~20%</span>
+        </div>
+        <div class="rating-row">
+          <span class="rating-label">"만족 — 적당히 즐기면 OK"</span>
+          <div class="rating-track"><div class="rating-fill" style="width:50%; background:var(--gold);"></div></div>
+          <span class="rating-val">~50%</span>
+        </div>
+        <div class="rating-row">
+          <span class="rating-label">"인생 여행" (아이 동반·디즈니 매니아)</span>
+          <div class="rating-track"><div class="rating-fill" style="width:30%; background:var(--green);"></div></div>
+          <span class="rating-val">~30%</span>
+        </div>
+      </div>
+
+      <div class="h2">💬 다녀온 사람들의 진짜 한마디</div>
+
+      <div class="quote">
+        <div class="quote-text">"부정적인 후기를 많이 본지라 마음을 많이 비우고 탑승했음. 전체적으로 대부분 승객들 질서도 잘 지키고 크게 눈살 찌푸릴 일 없었음. <strong>예약 치열한 건 과감히 포기할 생각으로 폰 거의 안 봄.</strong> 덕분에 여행 잘 마쳤습니다 😊"</div>
+        <div class="quote-author">— 익명 (4월 후반 항차, 가장 추천 많이 받은 마인드셋)</div>
+      </div>
+
+      <div class="quote">
+        <div class="quote-text">"아이가 셋이라 정신없었지만 <strong>$39짜리 ○○○ 산 거 유일한 소비</strong>. 크기가 큰 편이라 가성비 괜찮은 거 같아요. 디즈니 매니아 아니어도 충분히 즐길 수 있음."</div>
+        <div class="quote-author">— 익명 (3월 항차, 3아이 가족)</div>
+      </div>
+
+      <div class="quote">
+        <div class="quote-text">"디즈니에 크게 열광하는 편은 아니지만 마블을 좋아하는 아들의 입장에서 느낀 간단한 후기입니다. 우선 <strong>객실에 대한 컨셉은 크게 중요하지 않았습니다.</strong> 스파이더맨 콘셉트로 꾸며져 있고 액자 두 개 걸려 있었지만 아들(8세) 세세하게 보는 스타일은 아니라서 큰 감흥 없었음."</div>
+        <div class="quote-author">— 익명 (마블 매니아 8세 아들 동반)</div>
+      </div>
+
+      <div class="quote">
+        <div class="quote-text">"<strong>일반룸 후기는 많으니 컨시룸 위주 후기 남겨드릴게요.</strong> 도움 되셨으면 ^^ … 1. 체크인 당일 컨시어지는 전용 체크인 라인 및 우선 체크인. 라운지에 음료 및 휴식공간 …"</div>
+        <div class="quote-author">— 카할라 (3/26 항차, 컨시어지 18가지 디테일)</div>
+      </div>
+
+      <div class="quote">
+        <div class="quote-text">"한국에 돌아와서 일하느라 정신이 없지만, 그래도 잠깐 짬을 내서 기억이 날아가기 전에, 흥분이 가시기 전에 정리해 봅니다. <strong>너무나 많은 후기가 있고, 저는 정말 아주 작은 부분만 경험해서</strong> 별로 도움이 되지 않을 수 있습니다. 저의 개인적 소회일 뿐."</div>
+        <div class="quote-author">— 익명 (5/4~5/7 항차)</div>
+      </div>
+
+      <div class="h2">🎯 다음 탑승자가 꼭 기억해야 할 7가지</div>
+
+      <div class="box-gold">
+        <div class="box-title">💎 100명의 후기에서 가장 자주 반복된 조언 TOP 7</div>
+        <ul class="bullet-list" style="font-size:14px;">
+          <li><strong>1. 마음을 비워라.</strong> 모든 예약 다 잡으려고 폰만 들여다 보면 여행 망함. 포기할 건 과감히 포기.</li>
+          <li><strong>2. 첫날 와이파이 잡히는 즉시 로얄게더링부터.</strong> 10분 늦으면 영영 못 함. (단, 항차마다 열리는 타이밍 다름)</li>
+          <li><strong>3. 첫날 점심은 17층 픽사 또는 샌프란시스코.</strong> 7층 오락실은 이미 만석. 픽사 창가 자리 널널함.</li>
+          <li><strong>4. 객실은 잠만 잠.</strong> 가든뷰는 후회 다수, 컨시 외엔 대부분 잠만 자는 공간. <strong>오션뷰가 가성비 갑.</strong></li>
+          <li><strong>5. 항차별 복불복</strong> — 캐릭터 라인업, 기념품 재고, 디즈니 앱 안정성, 직원 트레이닝 모두 항차마다 다름. <strong>이 가이드는 가이드일 뿐.</strong></li>
+          <li><strong>6. 픽시는 80~130개.</strong> 처음에 적게, 후반에 좋은 거 받으면 보답. 첫날 다 뿌리면 후회.</li>
+          <li><strong>7. 멀미는 의외로 없음.</strong> 프로 멀미러도 OK. 의무실에 멀미약 있음. 단, <strong>육지 멀미는 흔함</strong> — 하선 후 어지러움 주의.</li>
+        </ul>
+      </div>
+
+      <div class="h2">⚖️ 4박 vs 3박 vs 5박 — 다녀온 사람들의 의견</div>
+
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr><th>기간</th><th>다녀온 평</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>3박</strong></td>
+              <td>"크루즈 첨인데 멀미 때메 걱정되어서 사박 아닌 삼박" — <strong>맛보기로 충분</strong>, 단 1일이 아쉬움</td>
+            </tr>
+            <tr>
+              <td><strong>4박</strong> <span class="tag tag-gold">가장 많음</span></td>
+              <td>"4박이 적당. 마지막날쯤이면 다 익숙해짐. <strong>1박 더 있어도 좋겠지만 가성비는 4박</strong>"</td>
+            </tr>
+            <tr>
+              <td><strong>5박</strong></td>
+              <td>"롤코 마스터 되려면 <strong>최소 7회 탑승</strong>(원더는 3번이면 마스터). 4박으론 부족" — 디즈니 매니아용</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="box-tip">
+        <div class="box-title">💡 디즈니 매니아 vs 일반 가족 만족도 차이</div>
+        <div style="font-size:13.5px; line-height:1.7;">
+          <strong style="color:var(--green);">디즈니 매니아 가족 (특히 여아 동반):</strong> 비비디·로얄게더링·캐릭터 그리팅 → 만족도 매우 높음. "인생 여행" 후기 다수.<br>
+          <strong style="color:var(--gold);">남아·마블 매니아:</strong> 어셈블 쇼·롤코 위주 → 캐릭터 그리팅은 비중 낮음. 만족도 보통.<br>
+          <strong style="color:var(--text-muted);">디즈니 무관심·성인만:</strong> "가든뷰 돈 아까워요" 같은 후회. <strong>크루즈 자체 + 싱가포르 관광 비중 높이는 게 유리.</strong>
+        </div>
+      </div>
+
+      <div class="h2">📝 마지막 한마디</div>
+
+      <div class="box-green">
+        <div class="box-title">🎁 단톡방 100명이 남긴 메시지</div>
+        <div style="font-size:14px; line-height:1.8;">
+          이 가이드는 <strong>3~5월 항차 다녀온 분들이 단톡방에 남긴 진짜 후기</strong>를 정리한 것입니다. 모든 항차가 똑같지 않습니다. 직원도, 캐릭터도, 기념품도, 디즈니 앱 상태도 항차마다 다릅니다.<br><br>
+          <strong>이 가이드의 정보가 본인 항차에서 안 맞을 수 있습니다.</strong> 그래도 괜찮습니다. 다녀온 분들의 공통된 말은 하나입니다 — <em>"마음 비우고, 욕심 내려놓고, 즐기세요."</em><br><br>
+          <strong>그리고 다녀오시면 단톡방에 후기 남겨주세요.</strong> 다음 탑승자들이 기다리고 있습니다. 💙
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </main>
+</div>
+
+<!-- 백투탑 -->
+<button id="back-top" aria-label="맨 위로">↑</button>
+
+<!-- 푸터 -->
+<footer class="footer">
+  <strong>Disney Cruise Adventure · 실탑승 후기 종합편</strong><br>
+  2026년 3~5월 싱가포르 출항 항차 단톡방 100+ 후기 기반 · 항차별 복불복 가능성 항상 고려<br>
+  <span style="opacity:0.6;">📝 본인 항차 다녀오시면 후기 남겨주세요 — 다음 탑승자에게 가장 큰 도움이 됩니다</span>
+</footer>
+
+<script>
+(function() {
+  // 섹션 접기/펼치기
+  document.querySelectorAll('.sec-header').forEach(function(h) {
+    h.addEventListener('click', function() {
+      var body = h.nextElementSibling;
+      var toggle = h.querySelector('.sec-toggle');
+      var isCollapsed = h.classList.toggle('collapsed');
+      body.classList.toggle('collapsed', isCollapsed);
+    });
+  });
+
+  // 사이드바 클릭 → 해당 섹션 펼치고 스크롤
+  document.querySelectorAll('.nav-item').forEach(function(a) {
+    a.addEventListener('click', function() {
+      document.querySelectorAll('.nav-item').forEach(function(x) { x.classList.remove('active'); });
+      a.classList.add('active');
+      var id = a.getAttribute('data-secid');
+      var sec = document.getElementById(id);
+      if (!sec) return;
+      var header = sec.querySelector('.sec-header');
+      var body = sec.querySelector('.sec-body');
+      if (header.classList.contains('collapsed')) {
+        header.classList.remove('collapsed');
+        body.classList.remove('collapsed');
+      }
+      sec.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+
+  // 검색
+  var searchInput = document.getElementById('searchInput');
+  var searchCount = document.getElementById('searchCount');
+  var mainContent = document.getElementById('mainContent');
+  var allSections = Array.prototype.slice.call(document.querySelectorAll('.section-card'));
+
+  function clearHighlight() {
+    mainContent.querySelectorAll('mark.search-hit').forEach(function(m) {
+      var p = m.parentNode;
+      p.replaceChild(document.createTextNode(m.textContent), m);
+      p.normalize();
+    });
+  }
+
+  function highlight(node, term) {
+    var count = 0;
+    function walk(n) {
+      if (n.nodeType === 3) {
+        var idx = n.nodeValue.toLowerCase().indexOf(term);
+        if (idx >= 0) {
+          var before = n.nodeValue.substring(0, idx);
+          var match = n.nodeValue.substring(idx, idx + term.length);
+          var after = n.nodeValue.substring(idx + term.length);
+          var mark = document.createElement('mark');
+          mark.className = 'search-hit';
+          mark.style.background = '#fff3a8';
+          mark.style.padding = '0 2px';
+          mark.textContent = match;
+          var parent = n.parentNode;
+          parent.insertBefore(document.createTextNode(before), n);
+          parent.insertBefore(mark, n);
+          parent.insertBefore(document.createTextNode(after), n);
+          parent.removeChild(n);
+          count++;
+        }
+      } else if (n.nodeType === 1 && !['SCRIPT','STYLE','MARK'].includes(n.nodeName)) {
+        Array.prototype.slice.call(n.childNodes).forEach(walk);
+      }
+    }
+    walk(node);
+    return count;
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      var term = searchInput.value.trim().toLowerCase();
+      clearHighlight();
+
+      if (term.length < 1) {
+        allSections.forEach(function(s) { s.style.display = ''; });
+        if (searchCount) searchCount.textContent = '';
+        var nores = document.getElementById('noResults');
+        if (nores) nores.remove();
+        return;
+      }
+
+      var totalHits = 0;
+      var visibleSecs = 0;
+      allSections.forEach(function(s) {
+        var text = s.textContent.toLowerCase();
+        if (text.indexOf(term) >= 0) {
+          s.style.display = '';
+          visibleSecs++;
+          // 펼침
+          var header = s.querySelector('.sec-header');
+          var body = s.querySelector('.sec-body');
+          header.classList.remove('collapsed');
+          body.classList.remove('collapsed');
+          // 하이라이트
+          totalHits += highlight(body, term);
+          totalHits += highlight(header, term);
+        } else {
+          s.style.display = 'none';
+        }
+      });
+
+      if (searchCount) {
+        searchCount.textContent = visibleSecs > 0 ?
+          (visibleSecs + '개 섹션 · ' + totalHits + '곳') :
+          '검색 결과 없음';
+      }
+
+      // 결과 없음 메시지
+      var nores = document.getElementById('noResults');
+      if (visibleSecs === 0) {
+        if (!nores) {
+          nores = document.createElement('div');
+          nores.id = 'noResults';
+          nores.className = 'no-results';
+          nores.innerHTML = '<span class="big">🔍</span>"' + searchInput.value + '"에 대한 결과를 찾을 수 없습니다.';
+          mainContent.appendChild(nores);
+        }
+      } else if (nores) {
+        nores.remove();
+      }
+    });
+  }
+
+  // 백투탑 버튼
+  var backTop = document.getElementById('back-top');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) {
+      backTop.classList.add('show');
+    } else {
+      backTop.classList.remove('show');
+    }
+  });
+  backTop.addEventListener('click', function() {
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // 스크롤 시 사이드바 active 자동 변경
+  var navItems = Array.prototype.slice.call(document.querySelectorAll('.nav-item'));
+  window.addEventListener('scroll', function() {
+    var pos = window.scrollY + 200;
+    var current = null;
+    allSections.forEach(function(s) {
+      if (s.offsetTop <= pos) current = s.id;
+    });
+    if (current) {
+      navItems.forEach(function(n) {
+        n.classList.toggle('active', n.getAttribute('data-secid') === current);
+      });
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
