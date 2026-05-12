@@ -101,7 +101,7 @@ body {
 }
 .search-input {
   width: 100%;
-  padding: 13px 44px 13px 44px;
+  padding: 13px 110px 13px 44px;
   border: none;
   border-radius: 10px;
   font-size: 13.5px;
@@ -115,8 +115,49 @@ body {
   color: var(--text-muted); font-size: 17px;
 }
 .search-count {
-  position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
-  font-size: 11.5px; color: var(--text-muted); pointer-events: none;
+  font-size: 11.5px; color: var(--text-muted);
+  min-width: 50px; text-align: center;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+.search-nav {
+  position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+  display: flex; align-items: center; gap: 2px;
+}
+.search-nav-btn {
+  background: rgba(10,22,40,0.06);
+  border: none;
+  width: 26px; height: 26px;
+  border-radius: 6px;
+  font-size: 18px; font-weight: 700;
+  color: var(--navy);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  line-height: 1;
+  padding: 0;
+  transition: background 0.15s;
+}
+.search-nav-btn:hover { background: rgba(10,22,40,0.14); }
+.search-nav-btn:active { background: rgba(10,22,40,0.22); }
+.search-nav-btn:disabled {
+  opacity: 0.3; cursor: not-allowed; background: transparent;
+}
+/* 활성(현재 보고 있는) 매치는 진한 주황색으로 강조 */
+mark.search-hit { background: #fff3a8; padding: 0 2px; }
+mark.search-hit.active {
+  background: #ff8c2a !important;
+  color: #fff;
+  box-shadow: 0 0 0 2px rgba(255,140,42,0.4);
+  border-radius: 3px;
+  scroll-margin-top: 80px;
+  scroll-margin-bottom: 120px;   /* 모바일 키보드 + 플로팅 nav 공간 확보 */
+}
+
+/* 모바일에서는 검색바 안의 ‹ › 숨김 — 플로팅 nav로 대체. 카운트만 input 안에 표시 */
+@media (max-width: 600px) {
+  .search-input { padding-right: 70px; }   /* 카운트 자리만 확보 */
+  .search-nav-btn { display: none; }
+  .search-count { min-width: 60px; padding-right: 8px; }
 }
 
 /* ── LAYOUT ─────────────────────────────── */
@@ -470,6 +511,69 @@ tbody td { padding: 9px 14px; vertical-align: top; }
 #back-top.show { opacity: 1; pointer-events: all; }
 #back-top:hover { background: var(--navy-light); transform: translateY(-2px); }
 
+/* 검색 결과 활성 시 떠있는 플로팅 컨트롤러 (모바일 친화) */
+#search-floating-nav {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  z-index: 1000;
+  display: none;                /* JS로 flex 변경 */
+  align-items: center;
+  gap: 4px;
+  background: var(--navy);
+  color: var(--white);
+  padding: 6px 8px;
+  border: 2px solid var(--gold);
+  border-radius: 40px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+#search-floating-nav .float-count {
+  padding: 0 10px;
+  font-size: 13px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--gold-light);
+  min-width: 56px;
+  text-align: center;
+}
+#search-floating-nav button {
+  background: rgba(255,255,255,0.10);
+  border: none;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  line-height: 1;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s;
+}
+#search-floating-nav button:hover,
+#search-floating-nav button:focus-visible {
+  background: rgba(255,255,255,0.22);
+  outline: none;
+}
+#search-floating-nav button:active { background: rgba(255,255,255,0.35); }
+#search-floating-nav .float-close {
+  font-size: 16px;
+  background: rgba(255,255,255,0.06);
+}
+
+@media (max-width: 600px) {
+  #search-floating-nav {
+    bottom: 16px;
+    right: 12px;
+    left: 12px;
+    justify-content: center;     /* 화면 하단 가로 전체로 펼치되 가운데 정렬 */
+    border-radius: 28px;
+    padding: 8px 10px;
+  }
+  #search-floating-nav button { width: 44px; height: 44px; font-size: 24px; }
+  #search-floating-nav .float-count { font-size: 14px; padding: 0 14px; }
+}
+
 .footer {
   background: var(--navy);
   color: rgba(255,255,255,0.5);
@@ -571,7 +675,11 @@ tbody td { padding: 9px 14px; vertical-align: top; }
   <div class="search-wrap">
     <span class="search-icon">🔍</span>
     <input class="search-input" id="searchInput" type="text" placeholder="검색 — 롤코, 오하나, 컨시, 비비디, 픽시…" autocomplete="off">
-    <span class="search-count" id="searchCount"></span>
+    <div class="search-nav" id="searchNav" style="display:none;">
+      <button class="search-nav-btn" id="searchPrev" type="button" title="이전 결과 (Shift+Enter)" aria-label="이전 결과">‹</button>
+      <span class="search-count" id="searchCount"></span>
+      <button class="search-nav-btn" id="searchNext" type="button" title="다음 결과 (Enter)" aria-label="다음 결과">›</button>
+    </div>
   </div>
 </header>
 
@@ -952,8 +1060,17 @@ tbody td { padding: 9px 14px; vertical-align: top; }
         <ul>
           <li><strong>방 컨셉 1분이면 감흥 없어짐</strong> — 액자 두 개 정도, 벽화 위주 (푸딩딩, 주누팜)</li>
           <li>방 컨셉보다 <strong>뷰·위치·층</strong> 우선 추천</li>
-          <li>웨이파인더(모아나) 뷰는 <strong>저녁 6시마다 영화 상영</strong>이라는 깨알 장점 있음 (애나벨)</li>
+          <li>웨이파인더(모아나) 뷰는 <strong>저녁 6시마다 영화 상영 + 밤에는 기타 라이브 공연</strong>이라는 깨알 장점 있음 (애나벨, 룰루룰루 4/20)</li>
         </ul>
+      </div>
+
+      <div class="quote">
+        <div class="quote-text">웨이파인더에서 계속 영화해줘용. 밤에는 기타 오빠가 노래해줘용 ㅋㅋㅋㅋ</div>
+        <span class="quote-author">룰루룰루 (4/20 항차, 웨이파인더뷰)</span>
+      </div>
+      <div class="quote">
+        <div class="quote-text">웨이파인더가 진짜 너무너무 더워서.. 모아나 공연보러 한번 가고 안 감.</div>
+        <span class="quote-author">레나네 (4/30 항차)</span>
       </div>
     </div>
   </div>
@@ -1097,14 +1214,14 @@ tbody td { padding: 9px 14px; vertical-align: top; }
     </div>
     <div class="sec-body collapsed">
       <div class="contributor-strip">
-        <strong>주요 출처</strong> · 밤톨이22(3/13 공연 강추), 박재영(3/19 감동), 쿠루즈(3/19), 애나벨(3/26 디테일), 주누팜(3/26 모아나 위에서), 카할라(3/26 컨시), 듀듀(4/13 가든), 밍밍(4/16 어벤져스 17층), 엘로이(4.2 줄 팁)
+        <strong>주요 출처</strong> · 밤톨이22(3/13 공연 강추), 박재영(3/19 감동), 쿠루즈(3/19), 애나벨(3/26 디테일), 주누팜(3/26 모아나 위에서), 카할라(3/26 컨시), 듀듀(4/13 가든), 밍밍(4/16 어벤져스 17층), 엘로이(4.2 줄 팁), 룰루룰루(4/20 웨이파인더), 레나네(4/30 모아나 바 자리)
       </div>
 
       <div class="box box-gold">
         <span class="box-icon">⭐ 공연이 사실상 어드벤처호의 본체</span>
         <ul>
           <li><strong>"공연이 특히 너무 좋아서 그것만으로도 본전 뽑는다"</strong> — 밤톨이22, 박재영, 듀듀 등 다수 일치</li>
-          <li>모아나 공연은 "안 봐도 아쉬움 없음" 후기와 "꼭 봐라" 후기 갈림. 더운 야외라 컨디션과 시즌 영향</li>
+          <li>모아나 공연은 더위가 가장 큰 변수. <strong>가든 바에 의자 가져다 보는 게 신박한 자리</strong> (레나네 4/30)</li>
           <li><strong>리멤버 쇼는 무조건 보고 무조건 일찍 줄서야 함</strong> — 1시간 권장 (써니, 쿠루즈)</li>
           <li>어벤져스 어셈블도 매우 호평. 마지막 날 직전 시간대가 알맞음 (애나벨, 밍밍)</li>
         </ul>
@@ -1119,7 +1236,7 @@ tbody td { padding: 9px 14px; vertical-align: top; }
           <tbody>
             <tr><td><strong>리멤버 (Remember)</strong></td><td>월트 디즈니 씨어터</td><td>O (디너 시간 연동)</td><td>⭐⭐⭐⭐⭐</td><td>1시간 전 줄. 앞쪽 중앙 사수 — 콘페티·버블이 머리 위로</td></tr>
             <tr><td><strong>씨즈 디 어드벤처</strong></td><td>월트 디즈니 씨어터</td><td>O</td><td>⭐⭐⭐⭐</td><td>오후 2시 공연. 자리 안 좋아도 재밌음 (푸딩딩)</td></tr>
-            <tr><td><strong>모아나 (Moana)</strong></td><td>가든 (야외)</td><td>X</td><td>⭐⭐⭐</td><td>더우니 위층(17층)에서 내려다보는 것도 옵션 (주누팜). 인어공주 비눗방울 앞자리만 맞음</td></tr>
+            <tr><td><strong>모아나 (Moana)</strong></td><td>가든 (야외)</td><td>X</td><td>⭐⭐⭐</td><td>15분 전 도착 + <strong>가든 바에서 의자 가져다 보기</strong> (레나네). 17층 난간에서 내려다보는 것도 옵션 (주누팜). 인어공주 비눗방울 앞자리만 맞음</td></tr>
             <tr><td><strong>어벤져스 어셈블</strong></td><td>가든 (야외)</td><td>X (하루 2타임)</td><td>⭐⭐⭐⭐⭐</td><td>마지막날 6:15 추천, 앞줄 4:30 도착 / 또는 17층 난간에서 (밍밍, 카할라)</td></tr>
             <tr><td><strong>출항 파티 (Let's Set Sail)</strong></td><td>가든</td><td>X (첫날 4타임 30분씩)</td><td>⭐⭐</td><td>스킵해도 큰 아쉬움 없음. 1차가 가장 한적 (애나벨)</td></tr>
             <tr><td><strong>호퍼스 (Hoopers)</strong></td><td>씨어터</td><td>X (하루 다회)</td><td>⭐⭐⭐</td><td>의외로 자리 없을 때 있음 (애나벨)</td></tr>
@@ -1135,6 +1252,26 @@ tbody td { padding: 9px 14px; vertical-align: top; }
         <li>컨시어지 우선입장은 40분 전부터 → 50분 전 가면 앞쪽 3번째 가운데 가능 (카할라)</li>
         <li>맨 앞 가운데는 컨시어지도 1시간 전에는 가야 함</li>
       </ul>
+
+      <h3 class="h2">🌺 모아나 공연 — "더위가 진짜 적"</h3>
+      <div class="box box-tip">
+        <span class="box-icon">💡 모아나는 가든 바에서 의자 가져다 보는 게 정답</span>
+        <ul>
+          <li><strong>15분 전 도착이면 충분</strong> — 1시간씩 안 줄 서도 OK (레나네 4/30)</li>
+          <li>가든 정면 자리는 햇빛 직격 → <strong>가든 바에 의자 가져다 놓고 보는 사람 다수</strong> (레나네 4/30)</li>
+          <li>위에서 내려다보는 옵션: <strong>17층 난간</strong> — 시원함 + 무대 잘 보임 (주누팜)</li>
+          <li>웨이파인더(모아나) 객실은 베란다에서 바로 관람 가능하지만 본인이 더워서 안 본 케이스 多 (레나네)</li>
+        </ul>
+      </div>
+      <div class="quote">
+        <div class="quote-text">모아나 공연은 15분 전에 가서 바에서 보세여. 사람들 다 바에서 의자 가져다 놓고 봄.</div>
+        <span class="quote-author">레나네 (4/30 항차)</span>
+      </div>
+      <div class="quote">
+        <div class="quote-text">그래서 저희도 한번 내려갔다가… 방 잘 잡았다고 저희끼리 꺄아아악 거리고 만족했습니다(?) ㅋㅋㅋㅋ</div>
+        <span class="quote-author">룰루룰루 (4/20 항차, 웨이파인더뷰)</span>
+      </div>
+
       <div class="box box-tip">
         <span class="box-icon">💡 다른 공연 줄서기 꿀팁</span>
         <ul>
@@ -2179,6 +2316,14 @@ tbody td { padding: 9px 14px; vertical-align: top; }
 <!-- 백투탑 -->
 <button id="back-top" aria-label="맨 위로">↑</button>
 
+<!-- 검색 결과 활성 시 떠있는 컨트롤러 (모바일 + 데스크톱) -->
+<div id="search-floating-nav" role="toolbar" aria-label="검색 결과 이동">
+  <button id="floatPrev" type="button" aria-label="이전 결과">‹</button>
+  <span class="float-count" id="floatCount">0/0</span>
+  <button id="floatNext" type="button" aria-label="다음 결과">›</button>
+  <button class="float-close" id="floatClose" type="button" aria-label="검색 종료">✕</button>
+</div>
+
 <!-- 푸터 -->
 <footer class="footer">
   <strong>Disney Cruise Adventure · 실탑승 후기 종합편</strong><br>
@@ -2234,24 +2379,34 @@ tbody td { padding: 9px 14px; vertical-align: top; }
     var count = 0;
     function walk(n) {
       if (n.nodeType === 3) {
-        var idx = n.nodeValue.toLowerCase().indexOf(term);
-        if (idx >= 0) {
-          var before = n.nodeValue.substring(0, idx);
-          var match = n.nodeValue.substring(idx, idx + term.length);
-          var after = n.nodeValue.substring(idx + term.length);
+        // 한 텍스트 노드 안에 검색어가 여러 번 등장하는 경우도 모두 처리
+        var lower = n.nodeValue.toLowerCase();
+        var idx = lower.indexOf(term);
+        if (idx < 0) return;
+        var parent = n.parentNode;
+        var original = n.nodeValue;
+        var cursor = 0;
+        var frag = document.createDocumentFragment();
+        while (idx >= 0) {
+          if (idx > cursor) {
+            frag.appendChild(document.createTextNode(original.substring(cursor, idx)));
+          }
           var mark = document.createElement('mark');
           mark.className = 'search-hit';
           mark.style.background = '#fff3a8';
           mark.style.padding = '0 2px';
-          mark.textContent = match;
-          var parent = n.parentNode;
-          parent.insertBefore(document.createTextNode(before), n);
-          parent.insertBefore(mark, n);
-          parent.insertBefore(document.createTextNode(after), n);
-          parent.removeChild(n);
+          mark.textContent = original.substring(idx, idx + term.length);
+          frag.appendChild(mark);
+          cursor = idx + term.length;
           count++;
+          idx = lower.indexOf(term, cursor);
         }
+        if (cursor < original.length) {
+          frag.appendChild(document.createTextNode(original.substring(cursor)));
+        }
+        parent.replaceChild(frag, n);
       } else if (n.nodeType === 1 && !['SCRIPT','STYLE','MARK'].includes(n.nodeName)) {
+        // 자식 노드 목록을 스냅샷으로 떠 놓고 순회 (DOM 수정 중 인덱스 어긋남 방지)
         Array.prototype.slice.call(n.childNodes).forEach(walk);
       }
     }
@@ -2260,19 +2415,90 @@ tbody td { padding: 9px 14px; vertical-align: top; }
   }
 
   if (searchInput) {
-    searchInput.addEventListener('input', function() {
+    // 한글 IME 조합 중에는 검색 실행 안 함 (조합 중 글자로 검색되는 버그 방지)
+    var isComposing = false;
+    var debounceTimer = null;
+    var allHits = [];                 // 현재 매칭된 <mark> 요소들
+    var currentHit = -1;              // 현재 활성 매치 인덱스
+    var searchNav = document.getElementById('searchNav');
+    var btnPrev = document.getElementById('searchPrev');
+    var btnNext = document.getElementById('searchNext');
+    var floatNav = document.getElementById('search-floating-nav');
+    var floatPrev = document.getElementById('floatPrev');
+    var floatNext = document.getElementById('floatNext');
+    var floatClose = document.getElementById('floatClose');
+    var floatCount = document.getElementById('floatCount');
+
+    function setActive(idx) {
+      // 모든 hit의 active 해제
+      allHits.forEach(function(m) { m.classList.remove('active'); });
+      if (idx < 0 || idx >= allHits.length) {
+        currentHit = -1;
+        updateCount();
+        return;
+      }
+      currentHit = idx;
+      var target = allHits[idx];
+      target.classList.add('active');
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      updateCount();
+    }
+
+    function updateCount() {
+      var visibleSecs = 0;
+      allSections.forEach(function(s) {
+        if (s.style.display !== 'none') visibleSecs++;
+      });
+      var pos = currentHit >= 0 ? (currentHit + 1) : 0;
+      var fullText = allHits.length > 0
+        ? (pos + '/' + allHits.length + ' · ' + visibleSecs + '섹션')
+        : '';
+      var shortText = allHits.length > 0
+        ? (pos + '/' + allHits.length)
+        : '';
+      if (searchCount) searchCount.textContent = fullText;
+      if (floatCount) floatCount.textContent = shortText;
+    }
+
+    function gotoNext() {
+      if (allHits.length === 0) return;
+      setActive((currentHit + 1) % allHits.length);
+    }
+    function gotoPrev() {
+      if (allHits.length === 0) return;
+      setActive((currentHit - 1 + allHits.length) % allHits.length);
+    }
+
+    function showFloatNav(show) {
+      if (!floatNav) return;
+      floatNav.style.display = show ? 'flex' : 'none';
+      // 검색 중에는 백투탑 숨김 (위치 충돌 방지)
+      var bt = document.getElementById('back-top');
+      if (bt) bt.style.visibility = show ? 'hidden' : '';
+    }
+
+    function closeSearch() {
+      searchInput.value = '';
+      runSearch();
+      searchInput.blur();             // 모바일 키보드 닫기
+    }
+
+    function runSearch() {
       var term = searchInput.value.trim().toLowerCase();
       clearHighlight();
+      allHits = [];
+      currentHit = -1;
 
       if (term.length < 1) {
         allSections.forEach(function(s) { s.style.display = ''; });
         if (searchCount) searchCount.textContent = '';
-        var nores = document.getElementById('noResults');
-        if (nores) nores.remove();
+        if (searchNav) searchNav.style.display = 'none';
+        showFloatNav(false);
+        var nores0 = document.getElementById('noResults');
+        if (nores0) nores0.remove();
         return;
       }
 
-      var totalHits = 0;
       var visibleSecs = 0;
       allSections.forEach(function(s) {
         var text = s.textContent.toLowerCase();
@@ -2285,18 +2511,19 @@ tbody td { padding: 9px 14px; vertical-align: top; }
           header.classList.remove('collapsed');
           body.classList.remove('collapsed');
           // 하이라이트
-          totalHits += highlight(body, term);
-          totalHits += highlight(header, term);
+          highlight(body, term);
+          highlight(header, term);
         } else {
           s.style.display = 'none';
         }
       });
 
-      if (searchCount) {
-        searchCount.textContent = visibleSecs > 0 ?
-          (visibleSecs + '개 섹션 · ' + totalHits + '곳') :
-          '검색 결과 없음';
-      }
+      // 하이라이트된 mark를 문서 순서대로 모음
+      allHits = Array.prototype.slice.call(mainContent.querySelectorAll('mark.search-hit'));
+
+      // nav 표시 여부
+      if (searchNav) searchNav.style.display = allHits.length > 0 ? 'flex' : 'none';
+      showFloatNav(allHits.length > 0);
 
       // 결과 없음 메시지
       var nores = document.getElementById('noResults');
@@ -2308,10 +2535,46 @@ tbody td { padding: 9px 14px; vertical-align: top; }
           nores.innerHTML = '<span class="big">🔍</span>"' + searchInput.value + '"에 대한 결과를 찾을 수 없습니다.';
           mainContent.appendChild(nores);
         }
-      } else if (nores) {
-        nores.remove();
+        if (searchCount) searchCount.textContent = '검색 결과 없음';
+      } else {
+        if (nores) nores.remove();
+        // 첫 번째 매치로 자동 이동
+        if (allHits.length > 0) setActive(0);
+        else updateCount();
+      }
+    }
+
+    function scheduleSearch() {
+      if (isComposing) return;            // 한글 조합 중에는 대기
+      if (debounceTimer) clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(runSearch, 200);   // 200ms 디바운스
+    }
+
+    searchInput.addEventListener('compositionstart', function() { isComposing = true; });
+    searchInput.addEventListener('compositionend', function() {
+      isComposing = false;
+      scheduleSearch();
+    });
+    searchInput.addEventListener('input', scheduleSearch);
+
+    // 키보드 단축키: Enter = 다음, Shift+Enter = 이전, Esc = 초기화
+    searchInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        if (e.shiftKey) gotoPrev(); else gotoNext();
+      } else if (e.key === 'Escape') {
+        closeSearch();
       }
     });
+
+    // 헤더 검색바 화살표 (데스크톱 위주)
+    if (btnPrev) btnPrev.addEventListener('click', gotoPrev);
+    if (btnNext) btnNext.addEventListener('click', gotoNext);
+
+    // 플로팅 컨트롤러 (모바일 + 데스크톱)
+    if (floatPrev) floatPrev.addEventListener('click', gotoPrev);
+    if (floatNext) floatNext.addEventListener('click', gotoNext);
+    if (floatClose) floatClose.addEventListener('click', closeSearch);
   }
 
   // 백투탑 버튼
